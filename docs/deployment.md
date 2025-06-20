@@ -3,21 +3,60 @@
 ## 1. Infrastructure Overview
 
 ### 1.1 Technology Stack
-- **Frontend**: React.js with Nginx
+- **Frontend**: React.js with Vite dev server
 - **Backend**: Node.js with Express
-- **Database**: PostgreSQL
-- **Cache**: Redis
-- **Container**: Docker
-- **Cloud**: AWS (ECS, RDS, ElastiCache)
+- **Initial Storage**: JSON files (local filesystem)
+- **Future Database**: PostgreSQL
+- **Future Cache**: Redis
+- **Future Container**: Docker
+- **Future Cloud**: AWS (ECS, RDS, ElastiCache)
 
 ### 1.2 Environment Setup
-- **Development**: Local Docker containers
-- **Staging**: AWS ECS Fargate
-- **Production**: AWS ECS with Auto Scaling
+- **MVP Development**: Local JSON file storage
+- **Future Development**: Local Docker containers
+- **Future Staging**: AWS ECS Fargate
+- **Future Production**: AWS ECS with Auto Scaling
 
-## 2. Development Deployment
+## 2. MVP Development Deployment
 
-### 2.1 Local Setup
+### 2.1 Local MVP Setup (JSON Storage)
+```bash
+# Clone repository
+git clone https://github.com/educaloi/volunteer-platform.git
+cd volunteer-platform
+
+# Install dependencies
+npm install
+
+# Initialize JSON data files
+npm run init:json-storage
+
+# Start backend server
+cd backend
+npm run dev
+
+# Start frontend (in new terminal)
+cd frontend
+npm run dev
+```
+
+### 2.2 JSON Storage Initialization
+```bash
+# Create data directory and initial JSON files
+mkdir -p data
+echo '{"users": []}' > data/users.json
+echo '{"profiles": []}' > data/volunteer-profiles.json
+echo '{"workshops": []}' > data/workshops.json
+echo '{"sessions": []}' > data/workshop-sessions.json
+echo '{"applications": []}' > data/applications.json
+echo '{"messages": []}' > data/messages.json
+echo '{"notifications": []}' > data/notifications.json
+echo '{"config": {"appName": "Volunteer Platform", "version": "1.0.0"}}' > data/system-config.json
+```
+
+## 3. Future Development Deployment
+
+### 3.1 Docker Setup (Post-MVP)
 ```bash
 # Clone repository
 git clone https://github.com/educaloi/volunteer-platform.git
@@ -66,15 +105,15 @@ services:
       - DATABASE_URL=postgresql://dev_user:dev_password@postgres:5432/volunteer_platform_dev
 ```
 
-## 3. Staging Deployment
+## 4. Staging Deployment
 
-### 3.1 AWS ECS Configuration
+### 4.1 AWS ECS Configuration
 - **Cluster**: volunteer-platform-staging
 - **Service**: Frontend and Backend services
 - **Task Definition**: Fargate compatibility
 - **Load Balancer**: Application Load Balancer
 
-### 3.2 Staging Deployment Script
+### 4.2 Staging Deployment Script
 ```bash
 #!/bin/bash
 echo "Deploying to staging..."
@@ -92,9 +131,9 @@ docker push $ECR_REGISTRY/volunteer-frontend:staging
 aws ecs update-service --cluster staging --service volunteer-platform --force-new-deployment
 ```
 
-## 4. Production Deployment
+## 5. Production Deployment
 
-### 4.1 Production Infrastructure
+### 5.1 Production Infrastructure
 - **Frontend**: React app served by Nginx
 - **Backend**: Node.js API with multiple instances
 - **Database**: AWS RDS PostgreSQL (Multi-AZ)
@@ -102,7 +141,7 @@ aws ecs update-service --cluster staging --service volunteer-platform --force-ne
 - **CDN**: AWS CloudFront
 - **SSL**: AWS Certificate Manager
 
-### 4.2 Production Docker Configuration
+### 5.2 Production Docker Configuration
 ```dockerfile
 # Frontend Dockerfile
 FROM node:18-alpine AS builder
@@ -129,9 +168,9 @@ EXPOSE 3000
 CMD ["node", "server.js"]
 ```
 
-## 5. CI/CD Pipeline
+## 6. CI/CD Pipeline
 
-### 5.1 GitHub Actions Workflow
+### 6.1 GitHub Actions Workflow
 ```yaml
 name: Deploy Application
 on:
@@ -159,9 +198,9 @@ jobs:
           aws ecs update-service --cluster production --service volunteer-platform --force-new-deployment
 ```
 
-## 6. Database Management
+## 7. Database Management (Post-MVP)
 
-### 6.1 Migration Strategy
+### 7.1 Migration Strategy
 ```javascript
 // Database migration example
 exports.up = function(knex) {
@@ -175,56 +214,56 @@ exports.up = function(knex) {
 };
 ```
 
-### 6.2 Backup Strategy
+### 7.2 Backup Strategy
 - **Automated backups**: Daily RDS snapshots
 - **Manual backups**: Before major deployments
 - **Retention**: 30 days for automated, 1 year for manual
 
-## 7. Monitoring and Logging
+## 8. Monitoring and Logging
 
-### 7.1 Application Monitoring
+### 8.1 Application Monitoring
 - **Health checks**: `/health` endpoint
 - **Metrics**: CloudWatch metrics
 - **Alerting**: SNS notifications for critical issues
 - **Logging**: CloudWatch Logs
 
-### 7.2 Performance Monitoring
+### 8.2 Performance Monitoring
 - **Response times**: Average < 500ms
 - **Error rates**: < 1%
 - **Uptime**: 99.9% target
 - **Database performance**: Query optimization
 
-## 8. Security Configuration
+## 9. Security Configuration
 
-### 8.1 SSL/TLS Setup
+### 9.1 SSL/TLS Setup
 - **Certificate**: AWS Certificate Manager
 - **Protocols**: TLS 1.2+
 - **HSTS**: Enabled
 - **Security headers**: Implemented
 
-### 8.2 Network Security
+### 9.2 Network Security
 - **VPC**: Private subnets for database
 - **Security groups**: Restrictive rules
 - **WAF**: Web Application Firewall enabled
 - **Secrets**: AWS Secrets Manager
 
-## 9. Scaling Configuration
+## 10. Scaling Configuration
 
-### 9.1 Auto Scaling
+### 10.1 Auto Scaling
 - **Frontend**: 2-5 instances based on CPU
 - **Backend**: 3-10 instances based on memory/CPU
 - **Database**: Read replicas for scaling
 - **Cache**: Redis cluster mode
 
-### 9.2 Load Balancing
+### 10.2 Load Balancing
 - **Algorithm**: Round robin
 - **Health checks**: Every 30 seconds
 - **Sticky sessions**: Disabled
 - **SSL termination**: At load balancer
 
-## 10. Backup and Recovery
+## 11. Backup and Recovery
 
-### 10.1 Backup Procedures
+### 11.1 Backup Procedures
 ```bash
 # Database backup
 aws rds create-db-snapshot --db-instance-identifier volunteer-platform --db-snapshot-identifier backup-$(date +%Y%m%d)
@@ -233,31 +272,31 @@ aws rds create-db-snapshot --db-instance-identifier volunteer-platform --db-snap
 aws s3 sync /app/uploads s3://volunteer-platform-backups/uploads/
 ```
 
-### 10.2 Disaster Recovery
+### 11.2 Disaster Recovery
 - **RTO**: 4 hours (Recovery Time Objective)
 - **RPO**: 1 hour (Recovery Point Objective)
 - **Multi-region**: Backup region configured
 - **Failover**: Manual process with documented procedures
 
-## 11. Deployment Checklist
+## 12. Deployment Checklist
 
-### 11.1 Pre-Deployment
+### 12.1 Pre-Deployment
 - [ ] All tests passing
 - [ ] Code review completed
 - [ ] Database migrations tested
 - [ ] Backup completed
 - [ ] Monitoring configured
 
-### 11.2 Post-Deployment
+### 12.2 Post-Deployment
 - [ ] Health checks passing
 - [ ] Application functionality verified
 - [ ] Performance metrics normal
 - [ ] Error logs reviewed
 - [ ] User acceptance testing
 
-## 12. Troubleshooting
+## 13. Troubleshooting
 
-### 12.1 Common Issues
+### 13.1 Common Issues
 ```bash
 # Check service status
 aws ecs describe-services --cluster production --services volunteer-platform
@@ -272,7 +311,7 @@ docker exec backend npm run db:test
 curl https://api.educaloi-volunteers.ca/health
 ```
 
-### 12.2 Rollback Procedure
+### 13.2 Rollback Procedure
 ```bash
 # Emergency rollback
 aws ecs update-service --cluster production --service volunteer-platform --task-definition previous-stable-version

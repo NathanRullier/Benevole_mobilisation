@@ -6,8 +6,9 @@
 - **Pattern**: Microservices-oriented with monolithic deployment initially
 - **Frontend**: Single Page Application (SPA) with React.js
 - **Backend**: RESTful API with Node.js/Express.js
-- **Database**: PostgreSQL with Redis for caching
-- **Deployment**: Containerized with Docker
+- **Initial Storage**: JSON files (MVP phase)
+- **Future Database**: PostgreSQL with Redis for caching
+- **Deployment**: Local development initially, then containerized with Docker
 
 ### 1.2 High-Level Architecture
 
@@ -156,11 +157,101 @@ src/
 - **Predictive analytics**
 - **Export capabilities**
 
-## 4. Database Architecture
+## 4. Data Storage Architecture
 
-### 4.1 PostgreSQL Schema Design
+### 4.1 MVP Phase: JSON File Storage
 
-#### 4.1.1 Core Entities
+#### 4.1.1 JSON File Structure
+```
+data/
+├── users.json              # User accounts and authentication
+├── volunteer-profiles.json # Extended volunteer information  
+├── workshops.json          # Workshop templates and details
+├── workshop-sessions.json  # Scheduled workshop instances
+├── applications.json       # Volunteer applications
+├── messages.json          # User communications
+├── notifications.json     # System notifications
+└── system-config.json     # Application configuration
+```
+
+#### 4.1.2 JSON Data Models
+```javascript
+// users.json structure
+{
+  "users": [
+    {
+      "id": "uuid-v4",
+      "email": "volunteer@example.com",
+      "passwordHash": "bcrypt-hash",
+      "firstName": "John",
+      "lastName": "Doe", 
+      "role": "volunteer|coordinator|admin",
+      "status": "pending|verified|suspended",
+      "createdAt": "2024-01-01T00:00:00Z",
+      "updatedAt": "2024-01-01T00:00:00Z",
+      "lastLogin": "2024-01-01T00:00:00Z"
+    }
+  ]
+}
+
+// volunteer-profiles.json structure
+{
+  "profiles": [
+    {
+      "userId": "uuid-v4",
+      "barAssociation": "Barreau du Québec",
+      "licenseNumber": "12345",
+      "specializations": ["Corporate Law", "Employment Law"],
+      "experienceYears": 8,
+      "languages": ["French", "English"],
+      "regions": ["Montreal", "Quebec City"],
+      "bio": "Experienced lawyer...",
+      "photoUrl": "/uploads/photos/user-id.jpg",
+      "availabilityPreferences": {
+        "daysOfWeek": ["Monday", "Wednesday"],
+        "timeSlots": ["morning", "afternoon"],
+        "maxWorkshopsPerMonth": 4
+      },
+      "createdAt": "2024-01-01T00:00:00Z",
+      "updatedAt": "2024-01-01T00:00:00Z"
+    }
+  ]
+}
+
+// workshops.json structure
+{
+  "workshops": [
+    {
+      "id": "uuid-v4",
+      "title": "Introduction to Employment Rights",
+      "description": "Basic employment law workshop",
+      "type": "school|library|community",
+      "duration": 90,
+      "targetAudience": "High school students",
+      "maxParticipants": 25,
+      "createdBy": "coordinator-user-id",
+      "status": "active|inactive",
+      "createdAt": "2024-01-01T00:00:00Z"
+    }
+  ]
+}
+```
+
+#### 4.1.3 JSON Management Features
+- **Atomic Operations**: Read-modify-write operations with file locking
+- **Backup Strategy**: Automatic backup before each write operation
+- **Validation**: JSON schema validation for data integrity
+- **Error Recovery**: Rollback capability from backup files
+- **Performance**: In-memory caching with periodic writes to disk
+
+### 4.2 Future PostgreSQL Schema Design
+
+#### 4.2.1 Migration Planning
+- **Phase 4 Migration**: Transition from JSON to PostgreSQL (Weeks 17-18)
+- **Data Migration Scripts**: Automated conversion from JSON to relational structure
+- **Zero-Downtime Migration**: Gradual transition with data synchronization
+
+#### 4.2.2 PostgreSQL Schema (Future Implementation)
 ```sql
 -- Users table (volunteers, coordinators, organizers)
 users (
@@ -188,24 +279,6 @@ workshop_sessions (
   id, workshop_id, organizer_id, volunteer_id,
   scheduled_date, location, status,
   feedback_score, notes
-)
-
--- Training modules
-training_modules (
-  id, title, description, content_url,
-  duration, difficulty_level, prerequisites[]
-)
-
--- User progress tracking
-user_progress (
-  user_id, module_id, status, score,
-  started_at, completed_at
-)
-
--- Recognition and achievements
-achievements (
-  id, user_id, type, title, description,
-  points, badge_url, earned_at
 )
 ```
 
@@ -365,9 +438,10 @@ Volunteer Recognition → Continuous Improvement → System Optimization
 - **JWT** for authentication
 - **Winston** for logging
 
-### 10.3 Database & Infrastructure
-- **PostgreSQL 14+** primary database
-- **Redis 7+** for caching and sessions
-- **Docker** for containerization
-- **AWS/Azure/GCP** cloud services
-- **NGINX** reverse proxy and load balancer 
+### 10.3 Storage & Infrastructure
+- **JSON Files** for MVP data storage
+- **PostgreSQL 14+** future primary database  
+- **Redis 7+** for future caching and sessions
+- **Local Development** initial setup
+- **Docker** for future containerization
+- **AWS/Azure/GCP** future cloud services 
