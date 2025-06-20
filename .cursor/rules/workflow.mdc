@@ -1,0 +1,17 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+When working you must use this workflow
+You must also use a TDD approach
+
+1. Create tests
+2. Code
+3. Compilation
+4. Test
+5. Update Docs
+
+When working follow the plan as much as you can and check off the things you did
+
+When working on the UI use playwright for the tests

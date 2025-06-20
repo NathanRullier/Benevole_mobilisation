@@ -1,0 +1,15 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+The documentation must follow this architecture
+/docs
+  ├── requirements.md
+  ├── architecture.md
+  ├── api.md
+  ├── plan.md
+  └── deployment.md
+
+
+  Then plan is a checkbox list of the tasks needed to do
