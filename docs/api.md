@@ -6,9 +6,12 @@
 - **Development**: `http://localhost:3000/api/v1`
 - **Production**: `https://api.educaloi-volunteers.ca/api/v1`
 
-### 1.2 Authentication
+### 1.2 Authentication (MVP Implementation)
 - **Type**: Bearer Token (JWT)
 - **Header**: `Authorization: Bearer <token>`
+- **Storage**: JSON file-based session management
+- **Token Expiry**: 24 hours
+- **Supported Roles**: volunteer, coordinator
 
 ### 1.3 Response Format
 ```json
@@ -19,7 +22,7 @@
 }
 ```
 
-## 2. Authentication Endpoints
+## 2. Authentication Endpoints (MVP Implementation)
 
 ### 2.1 User Registration
 ```http
@@ -28,12 +31,31 @@ Content-Type: application/json
 
 {
   "email": "user@example.com",
-  "password": "password",
+  "password": "SecurePass123!",
   "firstName": "John",
   "lastName": "Doe",
   "role": "volunteer"
 }
 ```
+
+**Response (201 Created)**:
+```json
+{
+  "message": "User registered successfully",
+  "userId": "uuid-string",
+  "user": {
+    "id": "uuid-string",
+    "email": "user@example.com",
+    "firstName": "John",
+    "lastName": "Doe",
+    "role": "volunteer"
+  }
+}
+```
+
+**Error Responses**:
+- `400 Bad Request`: Invalid email format, weak password, or invalid role
+- `409 Conflict`: User with email already exists
 
 ### 2.2 User Login
 ```http
@@ -42,7 +64,241 @@ Content-Type: application/json
 
 {
   "email": "user@example.com",
-  "password": "password"
+  "password": "SecurePass123!"
+}
+```
+
+**Response (200 OK)**:
+```json
+{
+  "message": "Login successful",
+  "token": "jwt-token-string",
+  "sessionId": "session-uuid",
+  "user": {
+    "id": "uuid-string",
+    "email": "user@example.com",
+    "firstName": "John",
+    "lastName": "Doe",
+    "role": "volunteer",
+    "isActive": true,
+    "lastLogin": "2024-01-15T10:30:00Z",
+    "createdAt": "2024-01-01T00:00:00Z"
+  }
+}
+```
+
+**Error Responses**:
+- `400 Bad Request`: Missing email or password
+- `401 Unauthorized`: Invalid credentials or deactivated account
+
+### 2.3 User Logout
+```http
+POST /auth/logout
+Authorization: Bearer <token>
+```
+
+**Response (200 OK)**:
+```json
+{
+  "message": "Successfully logged out"
+}
+```
+
+### 2.4 Get Current User Profile
+```http
+GET /auth/profile
+Authorization: Bearer <token>
+```
+
+**Response (200 OK)**:
+```json
+{
+  "user": {
+    "id": "uuid-string",
+    "email": "user@example.com",
+    "firstName": "John",
+    "lastName": "Doe",
+    "role": "volunteer",
+    "isActive": true,
+    "lastLogin": "2024-01-15T10:30:00Z",
+    "createdAt": "2024-01-01T00:00:00Z",
+    "updatedAt": "2024-01-15T10:30:00Z"
+  }
+}
+```
+
+### 2.5 Update User Profile
+```http
+PUT /auth/profile
+Authorization: Bearer <token>
+Content-Type: application/json
+
+{
+  "firstName": "Jane",
+  "lastName": "Smith"
+}
+```
+
+**Response (200 OK)**:
+```json
+{
+  "message": "Profile updated successfully",
+  "user": {
+    "id": "uuid-string",
+    "email": "user@example.com",
+    "firstName": "Jane",
+    "lastName": "Smith",
+    "role": "volunteer",
+    "isActive": true,
+    "updatedAt": "2024-01-15T11:00:00Z"
+  }
+}
+```
+
+### 2.6 Verify Token
+```http
+GET /auth/verify
+Authorization: Bearer <token>
+```
+
+**Response (200 OK)**:
+```json
+{
+  "valid": true,
+  "user": {
+    "id": "uuid-string",
+    "email": "user@example.com",
+    "firstName": "John",
+    "lastName": "Doe",
+    "role": "volunteer"
+  }
+}
+```
+
+### 2.7 Refresh Token
+```http
+POST /auth/refresh
+Authorization: Bearer <token>
+```
+
+**Response (200 OK)**:
+```json
+{
+  "message": "Token refreshed successfully",
+  "token": "new-jwt-token-string"
+}
+```
+
+### 2.8 Password Requirements
+Password must meet the following criteria:
+- At least 8 characters long
+- Contains at least one uppercase letter (A-Z)
+- Contains at least one lowercase letter (a-z)
+- Contains at least one number (0-9)
+- Contains at least one special character (!@#$%^&*(),.?":{}|<>)
+- Cannot be a common password (password, 123456789, qwerty, etc.)
+
+### 2.9 JWT Token Details
+- **Algorithm**: HS256
+- **Expiration**: 24 hours
+- **Issuer**: volunteer-platform
+- **Audience**: volunteer-platform-users
+- **Payload includes**: userId, email, role, sessionId
+
+### 2.10 Role-Based Access Control
+- **volunteer**: Can access own profile, workshops, applications
+- **coordinator**: Can access volunteer features + workshop management, volunteer oversight
+- Roles are hierarchical: coordinators have all volunteer permissions
+
+### 2.11 Coordinator Endpoints (MVP Implementation)
+
+#### 2.11.1 Get Coordinator Dashboard
+```http
+GET /coordinator/dashboard
+Authorization: Bearer <coordinator_token>
+```
+
+**Response (200 OK)**:
+```json
+{
+  "dashboard": {
+    "totalWorkshops": 0,
+    "pendingApplications": 0,
+    "activeVolunteers": 0,
+    "upcomingWorkshops": [],
+    "recentActivity": []
+  },
+  "coordinator": {
+    "id": "uuid-string",
+    "email": "coordinator@example.com",
+    "firstName": "Jane",
+    "lastName": "Coordinator",
+    "role": "coordinator"
+  }
+}
+```
+
+**Error Responses**:
+- `401 Unauthorized`: Invalid or missing token
+- `403 Forbidden`: Insufficient privileges (not a coordinator)
+
+#### 2.11.2 Get All Workshops (Coordinator Only)
+```http
+GET /coordinator/workshops
+Authorization: Bearer <coordinator_token>
+```
+
+**Response (200 OK)**:
+```json
+{
+  "workshops": [],
+  "total": 0
+}
+```
+
+#### 2.11.3 Create Workshop (Coordinator Only)
+```http
+POST /coordinator/workshops
+Authorization: Bearer <coordinator_token>
+Content-Type: application/json
+
+{
+  "title": "Introduction to Employment Law",
+  "description": "Basic employment law workshop for students",
+  "date": "2024-03-15T10:00:00Z",
+  "location": "Montreal High School"
+}
+```
+
+**Response (201 Created)**:
+```json
+{
+  "message": "Workshop created successfully",
+  "workshop": {
+    "id": "workshop_1234567890",
+    "title": "Introduction to Employment Law",
+    "description": "Basic employment law workshop for students",
+    "date": "2024-03-15T10:00:00Z",
+    "location": "Montreal High School",
+    "coordinatorId": "uuid-string",
+    "status": "draft",
+    "createdAt": "2024-01-15T12:00:00Z",
+    "updatedAt": "2024-01-15T12:00:00Z"
+  }
+}
+```
+
+#### 2.11.4 Get All Volunteers (Coordinator Only)
+```http
+GET /coordinator/volunteers
+Authorization: Bearer <coordinator_token>
+```
+
+**Response (200 OK)**:
+```json
+{
+  "volunteers": [],
+  "total": 0
 }
 ```
 

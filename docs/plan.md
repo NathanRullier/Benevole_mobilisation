@@ -26,10 +26,10 @@ Each feature follows this workflow:
 ## 🎯 **MVP Phase: Core Functionality (Weeks 1-4)**
 
 ### MVP.1 Project Setup & JSON Storage
-- [ ] **MVP.1.1 Create Tests**: File system operations and JSON handling tests
-- [ ] **MVP.1.2 Code**: Initialize Node.js project with JSON storage system
-- [ ] **MVP.1.3 Compile**: Project structure compilation
-- [ ] **MVP.1.4 Test**: JSON read/write operations testing
+- [x] **MVP.1.1 Create Tests**: File system operations and JSON handling tests
+- [x] **MVP.1.2 Code**: Initialize Node.js project with JSON storage system
+- [x] **MVP.1.3 Compile**: Project structure compilation
+- [x] **MVP.1.4 Test**: JSON read/write operations testing
 - [ ] **MVP.1.5 Docs**: Update architecture.md with JSON storage approach
 
 #### JSON Storage Structure:
@@ -38,22 +38,22 @@ Each feature follows this workflow:
 - [ ] **MVP.1.8** `data/workshops.json` - Workshop templates and information
 - [ ] **MVP.1.9** `data/workshop-sessions.json` - Scheduled workshop instances
 - [ ] **MVP.1.10** `data/applications.json` - Volunteer workshop applications
-- [ ] **MVP.1.11** File-based ID generation and management system
-- [ ] **MVP.1.12** JSON validation and error handling
+- [x] **MVP.1.11** File-based ID generation and management system
+- [x] **MVP.1.12** JSON validation and error handling
 
 ### MVP.2 Basic Authentication System
-- [ ] **MVP.2.1 Create Tests**: JWT authentication with JSON storage tests
-- [ ] **MVP.2.2 Code**: Simple user registration and login with JSON files
-- [ ] **MVP.2.3 Compile**: Authentication service compilation
-- [ ] **MVP.2.4 Test**: Login/logout workflow testing
-- [ ] **MVP.2.5 Docs**: Update API.md with basic auth endpoints
+- [x] **MVP.2.1 Create Tests**: JWT authentication with JSON storage tests
+- [x] **MVP.2.2 Code**: Simple user registration and login with JSON files
+- [x] **MVP.2.3 Compile**: Authentication service compilation
+- [x] **MVP.2.4 Test**: Login/logout workflow testing
+- [x] **MVP.2.5 Docs**: Update API.md with basic auth endpoints
 
 #### MVP Authentication Features:
-- [ ] **MVP.2.6** User registration (email, password, basic info)
-- [ ] **MVP.2.7** Simple login/logout with JWT tokens
-- [ ] **MVP.2.8** Basic role assignment (volunteer, coordinator)
-- [ ] **MVP.2.9** Password hashing and validation
-- [ ] **MVP.2.10** Session management with JSON storage
+- [x] **MVP.2.6** User registration (email, password, basic info)
+- [x] **MVP.2.7** Simple login/logout with JWT tokens
+- [x] **MVP.2.8** Basic role assignment (volunteer, coordinator)
+- [x] **MVP.2.9** Password hashing and validation
+- [x] **MVP.2.10** Session management with JSON storage
 
 ### MVP.3 Basic User Profiles
 - [ ] **MVP.3.1 Create Tests**: Profile CRUD operations with JSON files

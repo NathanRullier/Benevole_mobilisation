@@ -13,5 +13,6 @@ You must also use a TDD approach
 5. Update Docs
 
 When working follow the plan as much as you can and check off the things you did
-
 When working on the UI use playwright for the tests
+Should should only go forth with a task when all previous tasks are complete and the project is working
+
