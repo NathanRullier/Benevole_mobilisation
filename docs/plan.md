@@ -41,6 +41,22 @@ Each feature follows this workflow:
 - [x] **MVP.1.11** File-based ID generation and management system
 - [x] **MVP.1.12** JSON validation and error handling
 
+### MVP.1F Frontend Setup & Foundation
+- [ ] **MVP.1F.1 Create Tests**: React component tests with Playwright
+- [ ] **MVP.1F.2 Code**: Initialize React.js project with TypeScript
+- [ ] **MVP.1F.3 Compile**: Frontend build system setup
+- [ ] **MVP.1F.4 Test**: Basic component rendering tests
+- [ ] **MVP.1F.5 Docs**: Update architecture.md with frontend setup
+
+#### Frontend Foundation Features:
+- [ ] **MVP.1F.6** React.js with TypeScript configuration
+- [ ] **MVP.1F.7** Component library setup (Material-UI or similar)
+- [ ] **MVP.1F.8** Routing system (React Router)
+- [ ] **MVP.1F.9** State management setup (Context API or Redux)
+- [ ] **MVP.1F.10** API client configuration (Axios)
+- [ ] **MVP.1F.11** Basic responsive layout components
+- [ ] **MVP.1F.12** Theme and styling system
+
 ### MVP.2 Basic Authentication System
 - [x] **MVP.2.1 Create Tests**: JWT authentication with JSON storage tests
 - [x] **MVP.2.2 Code**: Simple user registration and login with JSON files
@@ -54,6 +70,22 @@ Each feature follows this workflow:
 - [x] **MVP.2.8** Basic role assignment (volunteer, coordinator)
 - [x] **MVP.2.9** Password hashing and validation
 - [x] **MVP.2.10** Session management with JSON storage
+
+### MVP.2F Frontend Authentication System
+- [ ] **MVP.2F.1 Create Tests**: Authentication component tests with Playwright
+- [ ] **MVP.2F.2 Code**: Login/Register React components with TypeScript
+- [ ] **MVP.2F.3 Compile**: Authentication UI compilation
+- [ ] **MVP.2F.4 Test**: Authentication flow E2E tests
+- [ ] **MVP.2F.5 Docs**: Update API.md with frontend auth integration
+
+#### Frontend Authentication Features:
+- [ ] **MVP.2F.6** User registration form with validation
+- [ ] **MVP.2F.7** Login form with error handling
+- [ ] **MVP.2F.8** JWT token storage and management
+- [ ] **MVP.2F.9** Protected route components
+- [ ] **MVP.2F.10** Role-based UI rendering (volunteer/coordinator)
+- [ ] **MVP.2F.11** Session persistence and auto-logout
+- [ ] **MVP.2F.12** Password strength indicator and validation
 
 ### MVP.3 Basic User Profiles
 - [x] **MVP.3.1 Create Tests**: Profile CRUD operations with JSON files
@@ -69,6 +101,22 @@ Each feature follows this workflow:
 - [x] **MVP.3.9** Basic availability preferences (days, time slots, max workshops)
 - [x] **MVP.3.10** Contact information management with validation
 
+### MVP.3F Frontend Profile Management
+- [ ] **MVP.3F.1 Create Tests**: Profile component tests with Playwright
+- [ ] **MVP.3F.2 Code**: Profile creation and editing React components
+- [ ] **MVP.3F.3 Compile**: Profile UI compilation
+- [ ] **MVP.3F.4 Test**: Profile management E2E tests
+- [ ] **MVP.3F.5 Docs**: Update requirements.md with profile UI features
+
+#### Frontend Profile Features:
+- [ ] **MVP.3F.6** Profile creation form with step-by-step wizard
+- [ ] **MVP.3F.7** Profile editing interface with live validation
+- [ ] **MVP.3F.8** Profile photo upload with preview
+- [ ] **MVP.3F.9** Specialization multi-select with search
+- [ ] **MVP.3F.10** Availability calendar component
+- [ ] **MVP.3F.11** Profile completeness indicator
+- [ ] **MVP.3F.12** Coordinator profile search interface
+
 ### MVP.4 Simple Workshop System
 - [ ] **MVP.4.1 Create Tests**: Workshop CRUD with JSON storage
 - [ ] **MVP.4.2 Code**: Basic workshop listing and details
@@ -82,6 +130,22 @@ Each feature follows this workflow:
 - [ ] **MVP.4.8** Workshop listing page for volunteers
 - [ ] **MVP.4.9** Workshop detail view
 - [ ] **MVP.4.10** Simple workshop status management
+
+### MVP.4F Frontend Workshop System
+- [ ] **MVP.4F.1 Create Tests**: Workshop component tests with Playwright
+- [ ] **MVP.4F.2 Code**: Workshop listing and detail React components
+- [ ] **MVP.4F.3 Compile**: Workshop UI compilation
+- [ ] **MVP.4F.4 Test**: Workshop display and creation E2E tests
+- [ ] **MVP.4F.5 Docs**: Update API.md with workshop UI integration
+
+#### Frontend Workshop Features:
+- [ ] **MVP.4F.6** Workshop creation form (coordinator only)
+- [ ] **MVP.4F.7** Workshop listing page with filters
+- [ ] **MVP.4F.8** Workshop detail modal/page
+- [ ] **MVP.4F.9** Workshop status indicators and management
+- [ ] **MVP.4F.10** Workshop search and filtering interface
+- [ ] **MVP.4F.11** Calendar view for workshops
+- [ ] **MVP.4F.12** Workshop location mapping integration
 
 ### MVP.5 Basic Application System
 - [ ] **MVP.5.1 Create Tests**: Application workflow tests with JSON
@@ -97,7 +161,25 @@ Each feature follows this workflow:
 - [ ] **MVP.5.9** Basic notification system (email only)
 - [ ] **MVP.5.10** Simple application history
 
-## 🚀 **Phase 1: Enhanced Core Features (Weeks 5-8)**
+### MVP.5F Frontend Application System
+- [ ] **MVP.5F.1 Create Tests**: Application component tests with Playwright
+- [ ] **MVP.5F.2 Code**: Application submission and review React components
+- [ ] **MVP.5F.3 Compile**: Application UI compilation
+- [ ] **MVP.5F.4 Test**: Application workflow E2E tests
+- [ ] **MVP.5F.5 Docs**: Update plan.md with complete MVP frontend status
+
+#### Frontend Application Features:
+- [ ] **MVP.5F.6** Workshop application form for volunteers
+- [ ] **MVP.5F.7** Application status tracking dashboard
+- [ ] **MVP.5F.8** Coordinator application review interface
+- [ ] **MVP.5F.9** Application history and timeline view
+- [ ] **MVP.5F.10** Notification display and management
+- [ ] **MVP.5F.11** Application approval/rejection workflow UI
+- [ ] **MVP.5F.12** Volunteer application statistics dashboard
+
+## 🚀 **Phase 1: Enhanced Core Features (Weeks 9-12)**
+
+**Note**: Each backend enhancement phase (1-8) should include corresponding frontend UI/UX improvements to support new backend features. Frontend tasks will follow the same TDD methodology using Playwright for E2E testing.
 
 ### 1.1 Improved Authentication & Security
 - [ ] **1.1.1 Create Tests**: Enhanced security features tests
@@ -141,7 +223,7 @@ Each feature follows this workflow:
 - [ ] **1.3.9** Coordinator override capability
 - [ ] **1.3.10** Matching suggestions interface
 
-## 📊 **Phase 2: Communication & Workflow (Weeks 9-12)**
+## 📊 **Phase 2: Communication & Workflow (Weeks 13-16)**
 
 ### 2.1 Basic Communication System
 - [ ] **2.1.1 Create Tests**: Messaging and notification tests
@@ -171,7 +253,7 @@ Each feature follows this workflow:
 - [ ] **2.2.9** Post-workshop feedback collection
 - [ ] **2.2.10** Basic reporting for coordinators
 
-## 📈 **Phase 3: Analytics & Reporting (Weeks 13-16)**
+## 📈 **Phase 3: Analytics & Reporting (Weeks 17-20)**
 
 ### 3.1 Basic Analytics Dashboard
 - [ ] **3.1.1 Create Tests**: Analytics calculation tests
@@ -201,7 +283,7 @@ Each feature follows this workflow:
 - [ ] **3.2.9** Basic performance metrics
 - [ ] **3.2.10** PDF report generation
 
-## 🔄 **Phase 4: Database Migration Preparation (Weeks 17-18)**
+## 🔄 **Phase 4: Database Migration Preparation (Weeks 21-22)**
 
 ### 4.1 Database Migration Planning
 - [ ] **4.1.1 Create Tests**: Database migration tests
@@ -231,7 +313,7 @@ Each feature follows this workflow:
 - [ ] **4.2.9** Backup and recovery procedures
 - [ ] **4.2.10** Performance monitoring
 
-## 🎨 **Phase 5: User Experience Enhancement (Weeks 19-22)**
+## 🎨 **Phase 5: User Experience Enhancement (Weeks 23-26)**
 
 ### 5.1 UI/UX Improvements
 - [ ] **5.1.1 Create Tests**: UI component and accessibility tests
@@ -261,7 +343,7 @@ Each feature follows this workflow:
 - [ ] **5.2.9** Progressive Web App features
 - [ ] **5.2.10** Offline capability (basic)
 
-## 🚀 **Phase 6: Advanced Features (Weeks 23-26)**
+## 🚀 **Phase 6: Advanced Features (Weeks 27-30)**
 
 ### 6.1 Training System
 - [ ] **6.1.1 Create Tests**: Training module tests
@@ -291,7 +373,7 @@ Each feature follows this workflow:
 - [ ] **6.2.9** Peer-to-peer messaging
 - [ ] **6.2.10** Community guidelines and moderation
 
-## 🏆 **Phase 7: Recognition & Gamification (Weeks 27-30)**
+## 🏆 **Phase 7: Recognition & Gamification (Weeks 31-34)**
 
 ### 7.1 Achievement System
 - [ ] **7.1.1 Create Tests**: Achievement calculation tests
@@ -321,7 +403,7 @@ Each feature follows this workflow:
 - [ ] **7.2.9** Advanced reporting
 - [ ] **7.2.10** Data visualization improvements
 
-## 🔐 **Phase 8: Production Readiness (Weeks 31-32)**
+## 🔐 **Phase 8: Production Readiness (Weeks 35-36)**
 
 ### 8.1 Security Hardening
 - [ ] **8.1.1 Create Tests**: Security vulnerability tests
@@ -379,12 +461,22 @@ data/
 The development plan uses a systematic numbering approach for easy task tracking and reference:
 
 ### MVP Phase Tasks:
-- **MVP.X.Y** format (e.g., MVP.1.1, MVP.2.5)
+- **MVP.X.Y** format for backend (e.g., MVP.1.1, MVP.2.5)
+- **MVP.XF.Y** format for frontend (e.g., MVP.1F.1, MVP.2F.5)
+
+#### Backend MVP Tasks:
 - **MVP.1**: Project Setup & JSON Storage (MVP.1.1 - MVP.1.12)
 - **MVP.2**: Basic Authentication System (MVP.2.1 - MVP.2.10)
 - **MVP.3**: Basic User Profiles (MVP.3.1 - MVP.3.10)
 - **MVP.4**: Simple Workshop System (MVP.4.1 - MVP.4.10)
 - **MVP.5**: Basic Application System (MVP.5.1 - MVP.5.10)
+
+#### Frontend MVP Tasks:
+- **MVP.1F**: Frontend Setup & Foundation (MVP.1F.1 - MVP.1F.12)
+- **MVP.2F**: Frontend Authentication System (MVP.2F.1 - MVP.2F.12)
+- **MVP.3F**: Frontend Profile Management (MVP.3F.1 - MVP.3F.12)
+- **MVP.4F**: Frontend Workshop System (MVP.4F.1 - MVP.4F.12)
+- **MVP.5F**: Frontend Application System (MVP.5F.1 - MVP.5F.12)
 
 ### Development Phase Tasks:
 - **X.Y.Z** format (e.g., 1.1.1, 2.2.5, 8.1.10)
@@ -401,10 +493,11 @@ The development plan uses a systematic numbering approach for easy task tracking
 - **JSON.X** format for JSON management utilities (JSON.1 - JSON.6)
 
 ### Total Task Count:
-- **MVP Phase**: 52 tasks
+- **MVP Phase Backend**: 52 tasks
+- **MVP Phase Frontend**: 60 tasks
 - **Development Phases**: 160 tasks
 - **JSON Management**: 6 tasks
-- **Total**: 218 numbered tasks
+- **Total**: 278 numbered tasks
 
 ## Success Metrics Tracking
 
@@ -422,17 +515,25 @@ The development plan uses a systematic numbering approach for easy task tracking
 
 ## Timeline & Resources
 
-**MVP Timeline**: 4 weeks
-**Full Development**: 32 weeks (8 months)
+**MVP Timeline**: 6-8 weeks (expanded to include full-stack implementation)
+**Full Development**: 36-40 weeks (9-10 months)
 **Team Size**: 2-3 developers initially
-**Key Roles**: Full-stack developer, UI/UX designer
+**Key Roles**: Full-stack developer, UI/UX designer, QA tester
 
 **Technology Stack:**
-- **Frontend**: React.js with TypeScript
+- **Frontend**: React.js with TypeScript, Material-UI/MUI, React Router
 - **Backend**: Node.js with Express.js
+- **Testing**: Jest (backend), Playwright (frontend E2E)
 - **Initial Storage**: JSON files
 - **Future Database**: PostgreSQL
 - **Authentication**: JWT tokens
-- **Deployment**: Local development, then cloud
+- **State Management**: Context API or Redux Toolkit
+- **Build Tools**: Vite or Create React App
+- **Deployment**: Local development, then cloud (Vercel/Netlify + Railway/Heroku)
 
-**Next Steps**: Begin MVP Phase with JSON storage setup, focusing on getting a working prototype quickly before adding advanced features and database migration. 
+**Next Steps**: 
+1. Complete remaining backend MVP features (MVP.4, MVP.5)
+2. Begin frontend implementation starting with MVP.1F
+3. Focus on getting working full-stack prototype quickly
+4. Implement comprehensive E2E testing with Playwright
+5. Plan database migration and advanced features 
