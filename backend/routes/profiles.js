@@ -182,11 +182,31 @@ router.get('/stats', authenticateToken, requireRole('coordinator'), async (req, 
   }
 });
 
-// Get specific profile by ID (coordinator only)
-router.get('/:profileId', authenticateToken, requireRole('coordinator'), async (req, res) => {
+// Get profile by ID - handles both profileId and userId with proper access control
+router.get('/:id', authenticateToken, async (req, res) => {
   try {
-    const { profileId } = req.params;
-    const profile = await profileService.getProfileById(profileId);
+    const requestingUserId = req.user.userId;
+    const targetId = req.params.id;
+    const isCoordinator = req.user.role === 'coordinator';
+    
+    let profile;
+    
+    // Try to get profile by profileId first (for coordinators)
+    if (isCoordinator) {
+      profile = await profileService.getProfileById(targetId);
+      
+      // If not found by profileId, try by userId
+      if (!profile) {
+        profile = await profileService.getProfileByUserId(targetId);
+      }
+    } else {
+      // For volunteers, only allow access to their own profile by userId
+      if (requestingUserId !== targetId) {
+        return res.status(403).json({ error: 'Access denied. You can only access your own profile.' });
+      }
+      
+      profile = await profileService.getProfileByUserId(targetId);
+    }
     
     if (!profile) {
       return res.status(404).json({ error: 'Profile not found' });
@@ -195,30 +215,6 @@ router.get('/:profileId', authenticateToken, requireRole('coordinator'), async (
     res.json({ profile });
   } catch (error) {
     console.error('Profile retrieval error:', error);
-    res.status(500).json({ error: 'Internal server error' });
-  }
-});
-
-// Block access to other users' profiles (security check)
-router.get('/:userId', authenticateToken, async (req, res) => {
-  try {
-    const requestingUserId = req.user.userId;
-    const targetUserId = req.params.userId;
-    
-    // Only allow users to access their own profile or coordinators to access any profile
-    if (requestingUserId !== targetUserId && req.user.role !== 'coordinator') {
-      return res.status(403).json({ error: 'Access denied. You can only access your own profile.' });
-    }
-    
-    const profile = await profileService.getProfileByUserId(targetUserId);
-    
-    if (!profile) {
-      return res.status(404).json({ error: 'Profile not found' });
-    }
-    
-    res.json({ profile });
-  } catch (error) {
-    console.error('Profile access error:', error);
     res.status(500).json({ error: 'Internal server error' });
   }
 });

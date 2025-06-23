@@ -11,5 +11,6 @@ The documentation must follow this architecture
   ├── plan.md
   └── deployment.md
 
-
   Then plan is a checkbox list of the tasks needed to do
+
+  whenver you complete a task in the plan check the checkbox
