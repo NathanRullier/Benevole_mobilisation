@@ -159,12 +159,12 @@ src/
 
 ## 4. Data Storage Architecture
 
-### 4.1 MVP Phase: JSON File Storage
+### 4.1 MVP Phase: JSON File Storage (Current Implementation)
 
 #### 4.1.1 JSON File Structure
 ```
 data/
-├── users.json              # User accounts and authentication
+├── users.json              # User accounts and authentication (IMPLEMENTED)
 ├── volunteer-profiles.json # Extended volunteer information  
 ├── workshops.json          # Workshop templates and details
 ├── workshop-sessions.json  # Scheduled workshop instances
@@ -174,7 +174,30 @@ data/
 └── system-config.json     # Application configuration
 ```
 
-#### 4.1.2 JSON Data Models
+#### 4.1.2 JsonStorage Service Implementation
+Our JSON storage system uses a robust `JsonStorage` class that provides:
+
+```javascript
+// JsonStorage Class Features (backend/utils/jsonStorage.js)
+class JsonStorage {
+  // Atomic write operations with file locking
+  async write(data)           // Write data with backup creation
+  async read()                // Read data with corruption recovery
+  async addRecord(collection, record)     // Add new record with UUID
+  async updateRecord(collection, id, data) // Update existing record
+  async deleteRecord(collection, id)      // Delete record by ID
+  async findRecords(collection, criteria) // Query records
+  
+  // Safety features
+  validateData(data)          // JSON schema validation
+  createBackup()              // Automatic backup before writes
+  recoverFromBackup()         // Restore from backup if corrupted
+  acquireLock()              // File locking for atomic operations
+  generateId()               // UUID generation for new records
+}
+```
+
+#### 4.1.3 Implemented JSON Data Models
 ```javascript
 // users.json structure
 {
@@ -237,12 +260,20 @@ data/
 }
 ```
 
-#### 4.1.3 JSON Management Features
-- **Atomic Operations**: Read-modify-write operations with file locking
-- **Backup Strategy**: Automatic backup before each write operation
-- **Validation**: JSON schema validation for data integrity
-- **Error Recovery**: Rollback capability from backup files
-- **Performance**: In-memory caching with periodic writes to disk
+#### 4.1.4 JSON Management Features (IMPLEMENTED)
+- **Atomic Operations**: Read-modify-write operations with file locking ✅
+- **Backup Strategy**: Automatic backup before each write operation ✅
+- **Validation**: JSON schema validation for data integrity ✅
+- **Error Recovery**: Rollback capability from backup files ✅
+- **UUID Generation**: Unique ID generation for all records ✅
+- **File Safety**: Directory creation, path validation, error handling ✅
+
+**Authentication Storage**: Currently implemented in `data/users.json` with:
+- JWT session management
+- bcrypt password hashing (12 salt rounds)
+- Role-based user management (volunteer/coordinator)
+- Session tracking with login timestamps
+- Automatic user data validation
 
 ### 4.2 Future PostgreSQL Schema Design
 

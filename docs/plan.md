@@ -30,14 +30,14 @@ Each feature follows this workflow:
 - [x] **MVP.1.2 Code**: Initialize Node.js project with JSON storage system
 - [x] **MVP.1.3 Compile**: Project structure compilation
 - [x] **MVP.1.4 Test**: JSON read/write operations testing
-- [ ] **MVP.1.5 Docs**: Update architecture.md with JSON storage approach
+- [x] **MVP.1.5 Docs**: Update architecture.md with JSON storage approach
 
 #### JSON Storage Structure:
-- [ ] **MVP.1.6** `data/users.json` - User accounts and basic info
-- [ ] **MVP.1.7** `data/volunteer-profiles.json` - Volunteer professional details  
-- [ ] **MVP.1.8** `data/workshops.json` - Workshop templates and information
-- [ ] **MVP.1.9** `data/workshop-sessions.json` - Scheduled workshop instances
-- [ ] **MVP.1.10** `data/applications.json` - Volunteer workshop applications
+- [x] **MVP.1.6** `data/users.json` - User accounts and basic info
+- [x] **MVP.1.7** `data/volunteer-profiles.json` - Volunteer professional details  
+- [x] **MVP.1.8** `data/workshops.json` - Workshop templates and information
+- [x] **MVP.1.9** `data/workshop-sessions.json` - Scheduled workshop instances
+- [x] **MVP.1.10** `data/applications.json` - Volunteer workshop applications
 - [x] **MVP.1.11** File-based ID generation and management system
 - [x] **MVP.1.12** JSON validation and error handling
 
@@ -367,12 +367,12 @@ data/
 ```
 
 ### JSON Management Features:
-- [ ] **JSON.1** Atomic file operations for data consistency
-- [ ] **JSON.2** Automatic backup before writes
-- [ ] **JSON.3** JSON schema validation
-- [ ] **JSON.4** Error handling and recovery
-- [ ] **JSON.5** File locking mechanisms
-- [ ] **JSON.6** Data migration utilities for database transition
+- [x] **JSON.1** Atomic file operations for data consistency
+- [x] **JSON.2** Automatic backup before writes
+- [x] **JSON.3** JSON schema validation
+- [x] **JSON.4** Error handling and recovery
+- [x] **JSON.5** File locking mechanisms
+- [x] **JSON.6** Data migration utilities for database transition
 
 ## 📊 **Task Numbering System Overview**
 
