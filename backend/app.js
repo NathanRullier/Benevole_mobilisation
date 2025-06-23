@@ -13,10 +13,12 @@ function createApp() {
   // Import routes
   const authRoutes = require('./routes/auth');
   const coordinatorRoutes = require('./routes/coordinator');
+  const profileRoutes = require('./routes/profiles');
 
   // API Routes
   app.use('/api/auth', authRoutes);
   app.use('/api/coordinator', coordinatorRoutes);
+  app.use('/api/profiles', profileRoutes);
 
   // Health check endpoint
   app.get('/api/health', (req, res) => {

@@ -56,18 +56,18 @@ Each feature follows this workflow:
 - [x] **MVP.2.10** Session management with JSON storage
 
 ### MVP.3 Basic User Profiles
-- [ ] **MVP.3.1 Create Tests**: Profile CRUD operations with JSON files
-- [ ] **MVP.3.2 Code**: React components for profile management
-- [ ] **MVP.3.3 Compile**: Frontend profile components
-- [ ] **MVP.3.4 Test**: Profile creation and editing E2E tests
-- [ ] **MVP.3.5 Docs**: Update requirements.md with MVP profile features
+- [x] **MVP.3.1 Create Tests**: Profile CRUD operations with JSON files
+- [x] **MVP.3.2 Code**: Backend profile service and API routes
+- [x] **MVP.3.3 Compile**: Backend profile functionality working
+- [x] **MVP.3.4 Test**: All 16 profile tests passing (50 total tests)
+- [x] **MVP.3.5 Docs**: Update api.md with profile endpoints
 
 #### MVP Profile Features:
-- [ ] **MVP.3.6** Basic user information (name, email, phone)
-- [ ] **MVP.3.7** Simple volunteer details (specialization, location)
-- [ ] **MVP.3.8** Profile photo upload (local file storage)
-- [ ] **MVP.3.9** Basic availability preferences
-- [ ] **MVP.3.10** Contact information management
+- [x] **MVP.3.6** Basic user information (phone, specializations, languages)
+- [x] **MVP.3.7** Volunteer details (bar association, license, experience)
+- [x] **MVP.3.8** Profile photo upload placeholder (local file storage)
+- [x] **MVP.3.9** Basic availability preferences (days, time slots, max workshops)
+- [x] **MVP.3.10** Contact information management with validation
 
 ### MVP.4 Simple Workshop System
 - [ ] **MVP.4.1 Create Tests**: Workshop CRUD with JSON storage

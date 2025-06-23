@@ -302,9 +302,249 @@ Authorization: Bearer <coordinator_token>
 }
 ```
 
-## 3. User Management Endpoints
+## 3. Volunteer Profile Management Endpoints (MVP Implementation)
 
-### 3.1 Get User Profile
+### 3.1 Create Volunteer Profile
+```http
+POST /profiles
+Authorization: Bearer <token>
+Content-Type: application/json
+
+{
+  "phone": "+1-514-555-0123",
+  "barAssociation": "Barreau du Québec",
+  "licenseNumber": "BQ123456",
+  "specializations": ["Employment Law", "Corporate Law"],
+  "experienceYears": 5,
+  "languages": ["French", "English"],
+  "regions": ["Montreal", "Laval"],
+  "bio": "Experienced employment lawyer passionate about education",
+  "availabilityPreferences": {
+    "daysOfWeek": ["Monday", "Wednesday", "Friday"],
+    "timeSlots": ["morning", "afternoon"],
+    "maxWorkshopsPerMonth": 3
+  }
+}
+```
+
+**Response (201 Created)**:
+```json
+{
+  "message": "Profile created successfully",
+  "profileId": "prof-uuid-here",
+  "profile": {
+    "profileId": "prof-uuid-here",
+    "userId": "user-uuid-here",
+    "phone": "+1-514-555-0123",
+    "barAssociation": "Barreau du Québec",
+    "licenseNumber": "BQ123456",
+    "specializations": ["Employment Law", "Corporate Law"],
+    "experienceYears": 5,
+    "languages": ["French", "English"],
+    "regions": ["Montreal", "Laval"],
+    "bio": "Experienced employment lawyer passionate about education",
+    "availabilityPreferences": {
+      "daysOfWeek": ["Monday", "Wednesday", "Friday"],
+      "timeSlots": ["morning", "afternoon"],
+      "maxWorkshopsPerMonth": 3
+    },
+    "profilePhoto": "/uploads/photos/default-avatar.jpg",
+    "createdAt": "2024-01-01T10:00:00.000Z",
+    "updatedAt": "2024-01-01T10:00:00.000Z",
+    "isActive": true
+  }
+}
+```
+
+**Error Responses**:
+- `400 Bad Request`: Validation failed (missing required fields, invalid format)
+- `409 Conflict`: Profile already exists for this user
+- `401 Unauthorized`: Authentication required
+
+### 3.2 Get Current User Profile
+```http
+GET /profiles/me
+Authorization: Bearer <token>
+```
+
+**Response (200 OK)**:
+```json
+{
+  "profile": {
+    "profileId": "prof-uuid-here",
+    "userId": "user-uuid-here",
+    "phone": "+1-514-555-0123",
+    "specializations": ["Employment Law"],
+    "languages": ["French", "English"],
+    "regions": ["Montreal"],
+    "bio": "Experienced lawyer",
+    "profilePhoto": "/uploads/photos/default-avatar.jpg",
+    "createdAt": "2024-01-01T10:00:00.000Z",
+    "updatedAt": "2024-01-01T10:00:00.000Z"
+  }
+}
+```
+
+**Error Responses**:
+- `404 Not Found`: Profile not found
+- `401 Unauthorized`: Authentication required
+
+### 3.3 Update Volunteer Profile
+```http
+PUT /profiles/me
+Authorization: Bearer <token>
+Content-Type: application/json
+
+{
+  "phone": "+1-514-555-9999",
+  "specializations": ["Employment Law", "Corporate Law"],
+  "experienceYears": 8
+}
+```
+
+**Response (200 OK)**:
+```json
+{
+  "message": "Profile updated successfully",
+  "profile": {
+    "profileId": "prof-uuid-here",
+    "userId": "user-uuid-here",
+    "phone": "+1-514-555-9999",
+    "specializations": ["Employment Law", "Corporate Law"],
+    "experienceYears": 8,
+    "updatedAt": "2024-01-01T11:00:00.000Z"
+  }
+}
+```
+
+### 3.4 Delete Volunteer Profile
+```http
+DELETE /profiles/me
+Authorization: Bearer <token>
+```
+
+**Response (200 OK)**:
+```json
+{
+  "message": "Profile deleted successfully"
+}
+```
+
+### 3.5 Update Profile Photo
+```http
+POST /profiles/me/photo
+Authorization: Bearer <token>
+Content-Type: application/json
+
+{
+  "photoUrl": "/uploads/photos/user-photo.jpg"
+}
+```
+
+**Response (200 OK)**:
+```json
+{
+  "message": "Profile photo updated successfully",
+  "profile": {
+    "profileId": "prof-uuid-here",
+    "profilePhoto": "/uploads/photos/user-photo.jpg",
+    "updatedAt": "2024-01-01T11:00:00.000Z"
+  }
+}
+```
+
+### 3.6 Search Volunteer Profiles (Coordinator Only)
+```http
+GET /profiles/search?specialization=Employment Law&region=Montreal
+Authorization: Bearer <coordinator_token>
+```
+
+**Query Parameters**:
+- `specialization`: Filter by legal specialization
+- `region`: Filter by geographic region
+- `language`: Filter by language capability
+- `experienceMin`: Minimum years of experience
+- `experienceMax`: Maximum years of experience
+- `availability`: Filter by availability day
+
+**Response (200 OK)**:
+```json
+{
+  "profiles": [
+    {
+      "profileId": "prof-uuid-here",
+      "userId": "user-uuid-here",
+      "specializations": ["Employment Law", "Corporate Law"],
+      "regions": ["Montreal", "Laval"],
+      "languages": ["French", "English"],
+      "experienceYears": 5
+    }
+  ],
+  "count": 1,
+  "filters": {
+    "specialization": "Employment Law",
+    "region": "Montreal"
+  }
+}
+```
+
+### 3.7 Get All Volunteer Profiles (Coordinator Only)
+```http
+GET /profiles/all
+Authorization: Bearer <coordinator_token>
+```
+
+**Response (200 OK)**:
+```json
+{
+  "profiles": [...],
+  "count": 25
+}
+```
+
+### 3.8 Get Profile Statistics (Coordinator Only)
+```http
+GET /profiles/stats
+Authorization: Bearer <coordinator_token>
+```
+
+**Response (200 OK)**:
+```json
+{
+  "stats": {
+    "totalProfiles": 25,
+    "bySpecialization": {
+      "Employment Law": 8,
+      "Corporate Law": 5,
+      "Family Law": 12
+    },
+    "byRegion": {
+      "Montreal": 15,
+      "Quebec City": 6,
+      "Laval": 4
+    },
+    "byLanguage": {
+      "French": 25,
+      "English": 18,
+      "Spanish": 3
+    },
+    "averageExperience": 7.2
+  }
+}
+```
+
+### 3.9 Profile Validation Rules
+- **Phone**: Must follow format `+1-xxx-xxx-xxxx`
+- **Specializations**: Required array with at least one item
+- **Experience Years**: Optional number between 0-50
+- **Languages**: Optional array
+- **Regions**: Optional array
+- **Bio**: Optional string
+- **Availability Preferences**: Optional object with daysOfWeek (array), timeSlots (array), maxWorkshopsPerMonth (number ≥ 1)
+
+## 4. User Management Endpoints
+
+### 4.1 Get User Profile
 ```http
 GET /users/me
 Authorization: Bearer <token>
