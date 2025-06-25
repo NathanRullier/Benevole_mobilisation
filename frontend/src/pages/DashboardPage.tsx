@@ -7,7 +7,6 @@ import {
   Paper,
   Box,
   Typography,
-  Grid,
   Card,
   CardContent,
   CardActions,
@@ -55,8 +54,8 @@ const DashboardPage: React.FC = () => {
       </Box>
 
       {/* Navigation Cards */}
-      <Grid container spacing={3} sx={{ mb: 4 }}>
-        <Grid item xs={12} sm={6} md={3}>
+      <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 3, mb: 4 }}>
+        <Box sx={{ flex: '1 1 300px', minWidth: '250px' }}>
           <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
             <CardContent sx={{ flexGrow: 1, textAlign: 'center' }}>
               <AssignmentTurnedIn sx={{ fontSize: 48, color: 'primary.main', mb: 2 }} />
@@ -73,9 +72,9 @@ const DashboardPage: React.FC = () => {
               </Button>
             </CardActions>
           </Card>
-        </Grid>
+        </Box>
 
-        <Grid item xs={12} sm={6} md={3}>
+        <Box sx={{ flex: '1 1 300px', minWidth: '250px' }}>
           <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
             <CardContent sx={{ flexGrow: 1, textAlign: 'center' }}>
               <EventAvailable sx={{ fontSize: 48, color: 'secondary.main', mb: 2 }} />
@@ -92,9 +91,9 @@ const DashboardPage: React.FC = () => {
               </Button>
             </CardActions>
           </Card>
-        </Grid>
+        </Box>
 
-        <Grid item xs={12} sm={6} md={3}>
+        <Box sx={{ flex: '1 1 300px', minWidth: '250px' }}>
           <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
             <CardContent sx={{ flexGrow: 1, textAlign: 'center' }}>
               <Person sx={{ fontSize: 48, color: 'success.main', mb: 2 }} />
@@ -111,9 +110,9 @@ const DashboardPage: React.FC = () => {
               </Button>
             </CardActions>
           </Card>
-        </Grid>
+        </Box>
 
-        <Grid item xs={12} sm={6} md={3}>
+        <Box sx={{ flex: '1 1 300px', minWidth: '250px' }}>
           <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
             <CardContent sx={{ flexGrow: 1, textAlign: 'center' }}>
               <School sx={{ fontSize: 48, color: 'warning.main', mb: 2 }} />
@@ -130,8 +129,8 @@ const DashboardPage: React.FC = () => {
               </Button>
             </CardActions>
           </Card>
-        </Grid>
-      </Grid>
+        </Box>
+      </Box>
 
       {/* Recent Activity */}
       <Paper sx={{ p: 3, mb: 3 }}>
@@ -155,24 +154,24 @@ const DashboardPage: React.FC = () => {
           Account Information
         </Typography>
         <Divider sx={{ mb: 2 }} />
-        <Grid container spacing={2}>
-          <Grid item xs={12} sm={6}>
+        <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 3 }}>
+          <Box sx={{ flex: '1 1 250px' }}>
             <Typography variant="body2" color="text.secondary">
               Name
             </Typography>
             <Typography variant="body1">
               {user.firstName} {user.lastName}
             </Typography>
-          </Grid>
-          <Grid item xs={12} sm={6}>
+          </Box>
+          <Box sx={{ flex: '1 1 250px' }}>
             <Typography variant="body2" color="text.secondary">
               Email
             </Typography>
             <Typography variant="body1">
               {user.email}
             </Typography>
-          </Grid>
-          <Grid item xs={12} sm={6}>
+          </Box>
+          <Box sx={{ flex: '1 1 250px' }}>
             <Typography variant="body2" color="text.secondary">
               Role
             </Typography>
@@ -182,16 +181,16 @@ const DashboardPage: React.FC = () => {
               size="small"
               sx={{ textTransform: 'capitalize' }}
             />
-          </Grid>
-          <Grid item xs={12} sm={6}>
+          </Box>
+          <Box sx={{ flex: '1 1 250px' }}>
             <Typography variant="body2" color="text.secondary">
               Member Since
             </Typography>
             <Typography variant="body1">
               {new Date(user.createdAt).toLocaleDateString()}
             </Typography>
-          </Grid>
-        </Grid>
+          </Box>
+        </Box>
       </Paper>
     </Container>
   );

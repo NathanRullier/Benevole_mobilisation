@@ -7,7 +7,6 @@ import {
   Paper,
   Box,
   Typography,
-  Grid,
   Card,
   CardContent,
   CardActions,
@@ -67,8 +66,8 @@ const CoordinatorDashboardPage: React.FC = () => {
         Coordinator Tools
       </Typography>
       
-      <Grid container spacing={3} sx={{ mb: 4 }}>
-        <Grid item xs={12} sm={6} md={4}>
+      <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 3, mb: 4 }}>
+        <Box sx={{ flex: '1 1 300px', minWidth: '250px' }}>
           <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
             <CardContent sx={{ flexGrow: 1, textAlign: 'center' }}>
               <EventNote sx={{ fontSize: 48, color: 'primary.main', mb: 2 }} />
@@ -85,9 +84,9 @@ const CoordinatorDashboardPage: React.FC = () => {
               </Button>
             </CardActions>
           </Card>
-        </Grid>
+        </Box>
 
-        <Grid item xs={12} sm={6} md={4}>
+        <Box sx={{ flex: '1 1 300px', minWidth: '250px' }}>
           <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
             <CardContent sx={{ flexGrow: 1, textAlign: 'center' }}>
               <ManageAccounts sx={{ fontSize: 48, color: 'secondary.main', mb: 2 }} />
@@ -104,9 +103,9 @@ const CoordinatorDashboardPage: React.FC = () => {
               </Button>
             </CardActions>
           </Card>
-        </Grid>
+        </Box>
 
-        <Grid item xs={12} sm={6} md={4}>
+        <Box sx={{ flex: '1 1 300px', minWidth: '250px' }}>
           <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
             <CardContent sx={{ flexGrow: 1, textAlign: 'center' }}>
               <RateReview sx={{ fontSize: 48, color: 'success.main', mb: 2 }} />
@@ -123,16 +122,16 @@ const CoordinatorDashboardPage: React.FC = () => {
               </Button>
             </CardActions>
           </Card>
-        </Grid>
-      </Grid>
+        </Box>
+      </Box>
 
       {/* Volunteer Features (Hierarchical Access) */}
       <Typography variant="h5" gutterBottom sx={{ mb: 3 }}>
         Personal Features
       </Typography>
       
-      <Grid container spacing={3} sx={{ mb: 4 }}>
-        <Grid item xs={12} sm={6} md={3}>
+      <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 3, mb: 4 }}>
+        <Box sx={{ flex: '1 1 300px', minWidth: '250px' }}>
           <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
             <CardContent sx={{ flexGrow: 1, textAlign: 'center' }}>
               <AssignmentTurnedIn sx={{ fontSize: 48, color: 'primary.main', mb: 2 }} />
@@ -149,9 +148,9 @@ const CoordinatorDashboardPage: React.FC = () => {
               </Button>
             </CardActions>
           </Card>
-        </Grid>
+        </Box>
 
-        <Grid item xs={12} sm={6} md={3}>
+        <Box sx={{ flex: '1 1 300px', minWidth: '250px' }}>
           <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
             <CardContent sx={{ flexGrow: 1, textAlign: 'center' }}>
               <EventAvailable sx={{ fontSize: 48, color: 'secondary.main', mb: 2 }} />
@@ -168,9 +167,9 @@ const CoordinatorDashboardPage: React.FC = () => {
               </Button>
             </CardActions>
           </Card>
-        </Grid>
+        </Box>
 
-        <Grid item xs={12} sm={6} md={3}>
+        <Box sx={{ flex: '1 1 300px', minWidth: '250px' }}>
           <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
             <CardContent sx={{ flexGrow: 1, textAlign: 'center' }}>
               <Person sx={{ fontSize: 48, color: 'success.main', mb: 2 }} />
@@ -187,9 +186,9 @@ const CoordinatorDashboardPage: React.FC = () => {
               </Button>
             </CardActions>
           </Card>
-        </Grid>
+        </Box>
 
-        <Grid item xs={12} sm={6} md={3}>
+        <Box sx={{ flex: '1 1 300px', minWidth: '250px' }}>
           <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
             <CardContent sx={{ flexGrow: 1, textAlign: 'center' }}>
               <School sx={{ fontSize: 48, color: 'warning.main', mb: 2 }} />
@@ -206,8 +205,8 @@ const CoordinatorDashboardPage: React.FC = () => {
               </Button>
             </CardActions>
           </Card>
-        </Grid>
-      </Grid>
+        </Box>
+      </Box>
 
       {/* Statistics Overview */}
       <Paper sx={{ p: 3, mb: 3 }}>
@@ -215,48 +214,40 @@ const CoordinatorDashboardPage: React.FC = () => {
           Overview Statistics
         </Typography>
         <Divider sx={{ mb: 2 }} />
-        <Grid container spacing={3}>
-          <Grid item xs={12} sm={6} md={3}>
-            <Box sx={{ textAlign: 'center' }}>
-              <Typography variant="h4" color="primary.main">
-                0
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                Total Workshops
-              </Typography>
-            </Box>
-          </Grid>
-          <Grid item xs={12} sm={6} md={3}>
-            <Box sx={{ textAlign: 'center' }}>
-              <Typography variant="h4" color="secondary.main">
-                0
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                Pending Applications
-              </Typography>
-            </Box>
-          </Grid>
-          <Grid item xs={12} sm={6} md={3}>
-            <Box sx={{ textAlign: 'center' }}>
-              <Typography variant="h4" color="success.main">
-                0
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                Active Volunteers
-              </Typography>
-            </Box>
-          </Grid>
-          <Grid item xs={12} sm={6} md={3}>
-            <Box sx={{ textAlign: 'center' }}>
-              <Typography variant="h4" color="warning.main">
-                0
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                Upcoming Workshops
-              </Typography>
-            </Box>
-          </Grid>
-        </Grid>
+        <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 3 }}>
+          <Box sx={{ flex: '1 1 200px', textAlign: 'center' }}>
+            <Typography variant="h4" color="primary.main">
+              0
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+              Total Workshops
+            </Typography>
+          </Box>
+          <Box sx={{ flex: '1 1 200px', textAlign: 'center' }}>
+            <Typography variant="h4" color="secondary.main">
+              0
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+              Pending Applications
+            </Typography>
+          </Box>
+          <Box sx={{ flex: '1 1 200px', textAlign: 'center' }}>
+            <Typography variant="h4" color="success.main">
+              0
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+              Active Volunteers
+            </Typography>
+          </Box>
+          <Box sx={{ flex: '1 1 200px', textAlign: 'center' }}>
+            <Typography variant="h4" color="warning.main">
+              0
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+              Upcoming Workshops
+            </Typography>
+          </Box>
+        </Box>
       </Paper>
 
       {/* Recent Activity */}
@@ -281,24 +272,24 @@ const CoordinatorDashboardPage: React.FC = () => {
           Account Information
         </Typography>
         <Divider sx={{ mb: 2 }} />
-        <Grid container spacing={2}>
-          <Grid item xs={12} sm={6}>
+        <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 3 }}>
+          <Box sx={{ flex: '1 1 250px' }}>
             <Typography variant="body2" color="text.secondary">
               Name
             </Typography>
             <Typography variant="body1">
               {user.firstName} {user.lastName}
             </Typography>
-          </Grid>
-          <Grid item xs={12} sm={6}>
+          </Box>
+          <Box sx={{ flex: '1 1 250px' }}>
             <Typography variant="body2" color="text.secondary">
               Email
             </Typography>
             <Typography variant="body1">
               {user.email}
             </Typography>
-          </Grid>
-          <Grid item xs={12} sm={6}>
+          </Box>
+          <Box sx={{ flex: '1 1 250px' }}>
             <Typography variant="body2" color="text.secondary">
               Role
             </Typography>
@@ -308,16 +299,16 @@ const CoordinatorDashboardPage: React.FC = () => {
               size="small"
               sx={{ textTransform: 'capitalize' }}
             />
-          </Grid>
-          <Grid item xs={12} sm={6}>
+          </Box>
+          <Box sx={{ flex: '1 1 250px' }}>
             <Typography variant="body2" color="text.secondary">
               Member Since
             </Typography>
             <Typography variant="body1">
               {new Date(user.createdAt).toLocaleDateString()}
             </Typography>
-          </Grid>
-        </Grid>
+          </Box>
+        </Box>
       </Paper>
     </Container>
   );
