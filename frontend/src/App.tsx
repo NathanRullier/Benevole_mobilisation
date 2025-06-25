@@ -4,7 +4,13 @@ import { ThemeProvider, createTheme, CssBaseline } from '@mui/material';
 import { Container, Typography, Paper } from '@mui/material';
 import Layout from './components/Layout';
 import HomePage from './pages/HomePage';
+import LoginPage from './pages/LoginPage';
+import RegisterPage from './pages/RegisterPage';
+import DashboardPage from './pages/DashboardPage';
+import CoordinatorDashboardPage from './pages/CoordinatorDashboardPage';
 import ErrorBoundary from './components/ErrorBoundary';
+import { AuthProvider } from './contexts/AuthContext';
+import { ProtectedRoute } from './components/ProtectedRoute';
 
 // MVP.1F.12: Theme and styling system
 const theme = createTheme({
@@ -37,19 +43,41 @@ const theme = createTheme({
 });
 
 // MVP.1F.6: React.js with TypeScript configuration
+// MVP.2F: Authentication System Integration
 function App(): React.ReactElement {
   return (
     <ErrorBoundary>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <Router>
-          <Layout>
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="*" element={<NotFoundPage />} />
-            </Routes>
-          </Layout>
-        </Router>
+        <AuthProvider>
+          <Router>
+            <Layout>
+              <Routes>
+                {/* Public Routes */}
+                <Route path="/" element={<HomePage />} />
+                <Route path="/login" element={<LoginPage />} />
+                <Route path="/register" element={<RegisterPage />} />
+                
+                {/* Protected Routes - Volunteer */}
+                <Route path="/dashboard" element={
+                  <ProtectedRoute requiredRole="volunteer">
+                    <DashboardPage />
+                  </ProtectedRoute>
+                } />
+                
+                {/* Protected Routes - Coordinator */}
+                <Route path="/coordinator/dashboard" element={
+                  <ProtectedRoute requiredRole="coordinator">
+                    <CoordinatorDashboardPage />
+                  </ProtectedRoute>
+                } />
+                
+                {/* 404 Page */}
+                <Route path="*" element={<NotFoundPage />} />
+              </Routes>
+            </Layout>
+          </Router>
+        </AuthProvider>
       </ThemeProvider>
     </ErrorBoundary>
   );

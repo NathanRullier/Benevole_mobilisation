@@ -16,4 +16,4 @@ try to run the application after every step and fix the problems if there are an
 When working follow the plan as much as you can and check off the things you did
 When working on the UI use playwright for the tests
 Should should only go forth with a task when all previous tasks are complete and the project is working
-
+After completing a task for the frontend you should test that it works with the backend
