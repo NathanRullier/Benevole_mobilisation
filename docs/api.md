@@ -24,6 +24,122 @@
 
 ## 2. Authentication Endpoints (MVP Implementation)
 
+### 2.0 Frontend Authentication Integration
+
+The frontend authentication system is built with React + TypeScript and integrates seamlessly with the backend authentication endpoints. Below is the complete frontend architecture:
+
+#### 2.0.1 Authentication Service (`authService.ts`)
+```typescript
+import { authService } from '../services/authService';
+
+// Login
+const response = await authService.login({ email, password });
+
+// Register
+await authService.register({ email, password, firstName, lastName, role });
+
+// Logout
+await authService.logout();
+
+// Check authentication status
+const isAuthenticated = authService.isAuthenticated();
+
+// Get current user
+const user = authService.getUser();
+
+// Verify token
+const isValid = await authService.verifyToken();
+```
+
+#### 2.0.2 Authentication Context (`AuthContext.tsx`)
+```typescript
+import { useAuth } from '../contexts/AuthContext';
+
+const MyComponent = () => {
+  const { user, isAuthenticated, login, logout, isLoading } = useAuth();
+  
+  // Component logic here
+};
+```
+
+#### 2.0.3 Protected Routes
+```typescript
+import { ProtectedRoute } from '../components/ProtectedRoute';
+
+// Protect any route
+<ProtectedRoute>
+  <DashboardPage />
+</ProtectedRoute>
+
+// Role-based protection
+<ProtectedRoute requiredRole="coordinator">
+  <CoordinatorDashboard />
+</ProtectedRoute>
+```
+
+#### 2.0.4 JWT Token Management
+- **Storage**: localStorage with keys `auth_token`, `user_data`, `session_id`
+- **Headers**: Automatically includes `Authorization: Bearer <token>` in API requests
+- **Expiration**: Auto-logout on 401 responses
+- **Persistence**: Maintains session across page reloads
+
+#### 2.0.5 Role-Based UI Rendering
+```typescript
+// Coordinators have hierarchical access (volunteer + coordinator features)
+const { user } = useAuth();
+
+{user?.role === 'coordinator' && (
+  <CoordinatorFeatures />
+)}
+
+{(user?.role === 'volunteer' || user?.role === 'coordinator') && (
+  <VolunteerFeatures />
+)}
+```
+
+#### 2.0.6 Password Strength Validation
+```typescript
+import { PasswordStrengthIndicator } from '../components/PasswordStrengthIndicator';
+
+<PasswordStrengthIndicator 
+  password={formData.password}
+  showRequirements={true}
+/>
+```
+
+#### 2.0.7 Frontend Routes
+- **Public Routes**: `/`, `/login`, `/register`
+- **Volunteer Routes**: `/dashboard` (requires volunteer or coordinator role)
+- **Coordinator Routes**: `/coordinator/dashboard` (requires coordinator role)
+- **Protected**: All routes automatically redirect to `/login` if not authenticated
+
+#### 2.0.8 Error Handling
+- **Network Errors**: Displays user-friendly error messages
+- **Token Expiration**: Auto-redirects to login with "session expired" message
+- **Validation Errors**: Real-time form validation with helpful feedback
+- **Role Access**: Clear error messages for insufficient permissions
+
+#### 2.0.9 Frontend Components Overview
+- **LoginPage**: Email/password form with validation and error handling
+- **RegisterPage**: Registration form with password strength indicator
+- **DashboardPage**: Volunteer dashboard with role-specific navigation
+- **CoordinatorDashboardPage**: Coordinator dashboard with hierarchical access
+- **ProtectedRoute**: Route wrapper for authentication/authorization
+- **PasswordStrengthIndicator**: Real-time password validation component
+
+#### 2.0.10 Integration Testing
+The frontend includes comprehensive Playwright E2E tests covering:
+- User registration with validation
+- Login/logout flows
+- Protected route access
+- Role-based UI rendering  
+- Token storage and management
+- Session persistence
+- Password strength validation
+- Error handling scenarios
+
+## 2. Authentication Endpoints (MVP Implementation)
+
 ### 2.1 User Registration
 ```http
 POST /auth/register
