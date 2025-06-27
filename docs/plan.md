@@ -101,28 +101,28 @@ Each feature follows this workflow:
 - [x] **MVP.3.9** Basic availability preferences (days, time slots, max workshops)
 - [x] **MVP.3.10** Contact information management with validation
 
-### MVP.3F Frontend Profile Management
-- [ ] **MVP.3F.1 Create Tests**: Profile component tests with Playwright
-- [ ] **MVP.3F.2 Code**: Profile creation and editing React components
-- [ ] **MVP.3F.3 Compile**: Profile UI compilation
-- [ ] **MVP.3F.4 Test**: Profile management E2E tests
-- [ ] **MVP.3F.5 Docs**: Update requirements.md with profile UI features
+### MVP.3F Frontend Profile Management ✅
+- [x] **MVP.3F.1 Create Tests**: Profile component tests with Playwright
+- [x] **MVP.3F.2 Code**: Profile creation and editing React components
+- [x] **MVP.3F.3 Compile**: Profile UI compilation
+- [x] **MVP.3F.4 Test**: Profile management E2E tests
+- [x] **MVP.3F.5 Docs**: Update requirements.md with profile UI features
 
 #### Frontend Profile Features:
-- [ ] **MVP.3F.6** Profile creation form with step-by-step wizard
-- [ ] **MVP.3F.7** Profile editing interface with live validation
-- [ ] **MVP.3F.8** Profile photo upload with preview
-- [ ] **MVP.3F.9** Specialization multi-select with search
-- [ ] **MVP.3F.10** Availability calendar component
-- [ ] **MVP.3F.11** Profile completeness indicator
-- [ ] **MVP.3F.12** Coordinator profile search interface
+- [x] **MVP.3F.6** Profile creation form with step-by-step wizard
+- [x] **MVP.3F.7** Profile editing interface with live validation
+- [x] **MVP.3F.8** Profile photo upload with preview
+- [x] **MVP.3F.9** Specialization multi-select with search
+- [x] **MVP.3F.10** Availability calendar component
+- [x] **MVP.3F.11** Profile completeness indicator
+- [x] **MVP.3F.12** Coordinator profile search interface
 
 ### MVP.4 Simple Workshop System
-- [ ] **MVP.4.1 Create Tests**: Workshop CRUD with JSON storage
-- [ ] **MVP.4.2 Code**: Basic workshop listing and details
-- [ ] **MVP.4.3 Compile**: Workshop management system
-- [ ] **MVP.4.4 Test**: Workshop creation and display tests
-- [ ] **MVP.4.5 Docs**: Update API.md with workshop endpoints
+- [x] **MVP.4.1 Create Tests**: Workshop CRUD with JSON storage
+- [x] **MVP.4.2 Code**: Basic workshop listing and details
+- [x] **MVP.4.3 Compile**: Workshop management system
+- [x] **MVP.4.4 Test**: Workshop creation and display tests
+- [x] **MVP.4.5 Docs**: Update API.md with workshop endpoints
 
 #### MVP Workshop Features:
 - [ ] **MVP.4.6** Workshop creation form (coordinator only)

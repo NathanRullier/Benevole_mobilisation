@@ -658,31 +658,364 @@ Authorization: Bearer <coordinator_token>
 - **Bio**: Optional string
 - **Availability Preferences**: Optional object with daysOfWeek (array), timeSlots (array), maxWorkshopsPerMonth (number ≥ 1)
 
-## 4. User Management Endpoints
+## 4. Workshop Management Endpoints (MVP Implementation)
 
-### 4.1 Get User Profile
+### 4.1 Create Workshop (Coordinator Only)
+```http
+POST /workshops
+Authorization: Bearer <coordinator_token>
+Content-Type: application/json
+
+{
+  "title": "Introduction to Employment Law",
+  "description": "A comprehensive workshop covering the basics of employment law in Quebec.",
+  "date": "2024-03-15",
+  "startTime": "09:00",
+  "endTime": "12:00",
+  "location": {
+    "name": "École Secondaire Jean-Baptiste-Meilleur",
+    "address": "777 Av. Sainte-Croix, Saint-Laurent, QC H4L 3Y5",
+    "city": "Saint-Laurent",
+    "region": "Montreal"
+  },
+  "maxVolunteers": 2,
+  "requiredSpecializations": ["Employment Law"],
+  "targetAudience": "Secondary School Students",
+  "workshopType": "Educational Presentation",
+  "status": "draft",
+  "contactPerson": {
+    "name": "Pierre Leclerc",
+    "email": "p.leclerc@school.qc.ca",
+    "phone": "+1-514-555-0199"
+  }
+}
+```
+
+**Response (201 Created)**:
+```json
+{
+  "message": "Workshop created successfully",
+  "workshopId": "workshop-uuid-here",
+  "workshop": {
+    "id": "workshop-uuid-here",
+    "title": "Introduction to Employment Law",
+    "description": "A comprehensive workshop covering the basics of employment law in Quebec.",
+    "date": "2024-03-15",
+    "startTime": "09:00",
+    "endTime": "12:00",
+    "location": {
+      "name": "École Secondaire Jean-Baptiste-Meilleur",
+      "address": "777 Av. Sainte-Croix, Saint-Laurent, QC H4L 3Y5",
+      "city": "Saint-Laurent",
+      "region": "Montreal"
+    },
+    "maxVolunteers": 2,
+    "requiredSpecializations": ["Employment Law"],
+    "targetAudience": "Secondary School Students",
+    "workshopType": "Educational Presentation",
+    "status": "draft",
+    "contactPerson": {
+      "name": "Pierre Leclerc",
+      "email": "p.leclerc@school.qc.ca",
+      "phone": "+1-514-555-0199"
+    },
+    "createdBy": "coordinator-uuid",
+    "applicationsCount": 0,
+    "applications": [],
+    "createdAt": "2024-01-15T12:00:00Z",
+    "updatedAt": "2024-01-15T12:00:00Z"
+  }
+}
+```
+
+**Error Responses**:
+- `400 Bad Request`: Validation failed (missing required fields, invalid date/time format)
+- `403 Forbidden`: Access denied (volunteer role attempting to create workshop)
+- `401 Unauthorized`: Authentication required
+
+### 4.2 Get All Workshops (Filtered)
+```http
+GET /workshops?region=Montreal&specialization=Employment Law&status=published&search=employment&date=2024-03-15
+Authorization: Bearer <token>
+```
+
+**Query Parameters**:
+- `region`: Filter by location region or city
+- `specialization`: Filter by required specialization
+- `status`: Filter by workshop status (published, draft, cancelled, completed)
+- `search`: Search in title and description
+- `date`: Filter by specific date (YYYY-MM-DD)
+- `includeAllStatuses`: (Coordinator only) Include all workshop statuses
+
+**Response (200 OK)**:
+```json
+{
+  "workshops": [
+    {
+      "id": "workshop-uuid-here",
+      "title": "Employment Law Workshop",
+      "description": "Employment law basics",
+      "date": "2024-03-15",
+      "startTime": "09:00",
+      "endTime": "12:00",
+      "location": {
+        "city": "Montreal",
+        "region": "Montreal"
+      },
+      "requiredSpecializations": ["Employment Law"],
+      "status": "published",
+      "applicationsCount": 1,
+      "maxVolunteers": 2,
+      "createdBy": "coordinator-uuid",
+      "createdAt": "2024-01-15T12:00:00Z",
+      "updatedAt": "2024-01-15T12:00:00Z"
+    }
+  ],
+  "total": 1
+}
+```
+
+**Access Control**:
+- **Volunteers**: Can only see published workshops
+- **Coordinators**: Can see all workshops (with `includeAllStatuses=true`)
+
+### 4.3 Get Workshop by ID
+```http
+GET /workshops/{workshopId}
+Authorization: Bearer <token>
+```
+
+**Response (200 OK)**:
+```json
+{
+  "workshop": {
+    "id": "workshop-uuid-here",
+    "title": "Contract Law Workshop",
+    "description": "Understanding contracts",
+    "date": "2024-03-25",
+    "startTime": "10:00",
+    "endTime": "13:00",
+    "location": {
+      "city": "Montreal",
+      "region": "Montreal"
+    },
+    "status": "published",
+    "maxVolunteers": 2,
+    "applicationsCount": 0,
+    "applications": [],
+    "createdBy": "coordinator-uuid",
+    "contactPerson": {
+      "name": "Marie Dubois",
+      "email": "m.dubois@school.qc.ca",
+      "phone": "+1-514-555-0188"
+    },
+    "createdAt": "2024-01-15T12:00:00Z",
+    "updatedAt": "2024-01-15T12:00:00Z"
+  }
+}
+```
+
+**Error Responses**:
+- `404 Not Found`: Workshop not found or not accessible (volunteers can't see draft workshops)
+- `401 Unauthorized`: Authentication required
+
+### 4.4 Update Workshop (Coordinator Only)
+```http
+PUT /workshops/{workshopId}
+Authorization: Bearer <coordinator_token>
+Content-Type: application/json
+
+{
+  "title": "Updated Workshop Title",
+  "description": "Updated description with more details",
+  "date": "2024-03-20",
+  "startTime": "10:00",
+  "endTime": "13:00",
+  "status": "published"
+}
+```
+
+**Response (200 OK)**:
+```json
+{
+  "message": "Workshop updated successfully",
+  "workshop": {
+    "id": "workshop-uuid-here",
+    "title": "Updated Workshop Title",
+    "description": "Updated description with more details",
+    "date": "2024-03-20",
+    "startTime": "10:00",
+    "endTime": "13:00",
+    "status": "published",
+    "updatedAt": "2024-01-15T13:00:00Z"
+  }
+}
+```
+
+**Error Responses**:
+- `400 Bad Request`: Validation failed
+- `403 Forbidden`: Access denied (volunteers cannot update workshops)
+- `404 Not Found`: Workshop not found
+
+### 4.5 Update Workshop Status (Coordinator Only)
+```http
+PUT /workshops/{workshopId}/status
+Authorization: Bearer <coordinator_token>
+Content-Type: application/json
+
+{
+  "status": "cancelled",
+  "cancellationReason": "Insufficient volunteer applications"
+}
+```
+
+**Valid Status Values**: `draft`, `published`, `cancelled`, `completed`
+
+**Response (200 OK)**:
+```json
+{
+  "message": "Workshop status updated successfully",
+  "workshop": {
+    "id": "workshop-uuid-here",
+    "status": "cancelled",
+    "cancellationReason": "Insufficient volunteer applications",
+    "updatedAt": "2024-01-15T13:00:00Z"
+  }
+}
+```
+
+### 4.6 Delete Workshop (Coordinator Only)
+```http
+DELETE /workshops/{workshopId}
+Authorization: Bearer <coordinator_token>
+```
+
+**Response (200 OK)**:
+```json
+{
+  "message": "Workshop deleted successfully"
+}
+```
+
+**Error Responses**:
+- `403 Forbidden`: Access denied (volunteers cannot delete workshops)
+- `404 Not Found`: Workshop not found
+
+### 4.7 Get Coordinator's Workshops
+```http
+GET /workshops/coordinator/my-workshops
+Authorization: Bearer <coordinator_token>
+```
+
+**Response (200 OK)**:
+```json
+{
+  "workshops": [
+    {
+      "id": "workshop-uuid-here",
+      "title": "My Workshop",
+      "status": "published",
+      "date": "2024-03-20",
+      "applicationsCount": 2,
+      "maxVolunteers": 3,
+      "createdAt": "2024-01-15T12:00:00Z"
+    }
+  ],
+  "total": 1
+}
+```
+
+### 4.8 Get Available Workshops for Volunteer
+```http
+GET /workshops/volunteer/available?region=Montreal&specialization=Employment Law&date=2024-03-15
+Authorization: Bearer <volunteer_token>
+```
+
+**Query Parameters**:
+- `region`: Filter by location region or city
+- `specialization`: Filter by required specialization
+- `date`: Filter by specific date
+
+**Response (200 OK)**:
+```json
+{
+  "workshops": [
+    {
+      "id": "workshop-uuid-here",
+      "title": "Employment Law Workshop",
+      "description": "Basics of employment law",
+      "date": "2024-03-15",
+      "startTime": "09:00",
+      "endTime": "12:00",
+      "location": {
+        "city": "Montreal",
+        "region": "Montreal"
+      },
+      "requiredSpecializations": ["Employment Law"],
+      "maxVolunteers": 2,
+      "applicationsCount": 0,
+      "status": "published"
+    }
+  ],
+  "total": 1
+}
+```
+
+**Note**: Only returns published workshops that are in the future.
+
+### 4.9 Workshop Data Validation Rules
+#### Required Fields (Creation):
+- `title`: Workshop title (string, max 200 characters)
+- `description`: Workshop description (string, max 2000 characters)
+- `date`: Workshop date (YYYY-MM-DD format, must be future date)
+- `startTime`: Start time (HH:MM format, 24-hour)
+- `endTime`: End time (HH:MM format, 24-hour, must be after start time)
+
+#### Optional Fields:
+- `location`: Object with name, address, city, region
+- `maxVolunteers`: Number of volunteers needed (integer, min: 1, max: 10)
+- `requiredSpecializations`: Array of required legal specializations
+- `targetAudience`: Target audience description
+- `workshopType`: Type of workshop (presentation, Q&A, etc.)
+- `contactPerson`: Object with name, email, phone
+- `status`: Workshop status (defaults to 'draft')
+
+#### Validation Rules:
+- Date cannot be in the past
+- End time must be after start time
+- Time format must be HH:MM (24-hour)
+- Email format validation for contact person
+- Status must be one of: draft, published, cancelled, completed
+- Max volunteers must be between 1 and 10
+
+### 4.10 Workshop Status Workflow
+1. **Draft**: Initial creation state, not visible to volunteers
+2. **Published**: Visible to volunteers, accepting applications
+3. **Cancelled**: Workshop cancelled, no longer accepting applications
+4. **Completed**: Workshop has been completed
+
+### 4.11 Workshop Authorization Matrix
+| Endpoint | Volunteer | Coordinator |
+|----------|-----------|-------------|
+| Create Workshop | ❌ | ✅ |
+| View Published Workshops | ✅ | ✅ |
+| View Draft/Cancelled Workshops | ❌ | ✅ |
+| Update Workshop | ❌ | ✅ |
+| Delete Workshop | ❌ | ✅ |
+| Change Status | ❌ | ✅ |
+| View All Workshops | ❌ | ✅ (with includeAllStatuses) |
+
+## 5. User Management Endpoints
+
+### 5.1 Get User Profile
 ```http
 GET /users/me
 Authorization: Bearer <token>
 ```
 
-### 3.2 Update User Profile
+### 5.2 Update User Profile
 ```http
 PUT /users/me
-Authorization: Bearer <token>
-```
-
-## 4. Workshop Management Endpoints
-
-### 4.1 Get Available Workshops
-```http
-GET /workshops
-Authorization: Bearer <token>
-```
-
-### 4.2 Apply for Workshop
-```http
-POST /workshops/:id/apply
 Authorization: Bearer <token>
 ```
 

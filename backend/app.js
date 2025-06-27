@@ -14,11 +14,13 @@ function createApp() {
   const authRoutes = require('./routes/auth');
   const coordinatorRoutes = require('./routes/coordinator');
   const profileRoutes = require('./routes/profiles');
+  const workshopRoutes = require('./routes/workshops');
 
   // API Routes
   app.use('/api/auth', authRoutes);
   app.use('/api/coordinator', coordinatorRoutes);
   app.use('/api/profiles', profileRoutes);
+  app.use('/api/workshops', workshopRoutes);
 
   // Health check endpoint
   app.get('/api/health', (req, res) => {
