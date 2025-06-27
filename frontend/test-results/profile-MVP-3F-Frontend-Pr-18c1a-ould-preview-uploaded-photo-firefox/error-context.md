@@ -7,7 +7,7 @@
 - main:
   - heading "Welcome to the Volunteer Management Platform" [level=2]
   - heading "Connecting legal professionals with educational opportunities across Quebec" [level=6]
-  - text: Connecting to backend...
+  - text: "✓ Backend Connected: Server is running"
   - heading "Volunteer Management" [level=5]
   - paragraph: Coordinate 200+ legal volunteers providing educational workshops
   - heading "Educational Workshops" [level=5]
@@ -21,6 +21,9 @@
   - alert:
     - strong: "Frontend Foundation:"
     - text: React.js with TypeScript, Material-UI, and React Router configured.
+  - alert:
+    - strong: "Backend Connectivity:"
+    - text: Successfully connected to backend API at localhost:3000
 - contentinfo:
   - paragraph: © 2024 Éducaloi - Volunteer Management Platform
 ```

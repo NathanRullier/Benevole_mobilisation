@@ -8,6 +8,7 @@ import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
 import DashboardPage from './pages/DashboardPage';
 import CoordinatorDashboardPage from './pages/CoordinatorDashboardPage';
+import ProfilePage from './pages/ProfilePage';
 import ErrorBoundary from './components/ErrorBoundary';
 import { AuthProvider } from './contexts/AuthContext';
 import { ProtectedRoute } from './components/ProtectedRoute';
@@ -62,6 +63,12 @@ function App(): React.ReactElement {
                 <Route path="/dashboard" element={
                   <ProtectedRoute requiredRole="volunteer">
                     <DashboardPage />
+                  </ProtectedRoute>
+                } />
+                
+                <Route path="/profile" element={
+                  <ProtectedRoute requiredRole="volunteer">
+                    <ProfilePage />
                   </ProtectedRoute>
                 } />
                 
