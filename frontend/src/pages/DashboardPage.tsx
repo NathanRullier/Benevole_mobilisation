@@ -2,6 +2,7 @@
 // MVP.2F.11: Session persistence and user welcome
 
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import {
   Container,
   Paper,
@@ -19,6 +20,7 @@ import { useAuth } from '../contexts/AuthContext';
 
 const DashboardPage: React.FC = () => {
   const { user, logout } = useAuth();
+  const navigate = useNavigate();
 
   const handleLogout = async () => {
     try {
@@ -86,7 +88,12 @@ const DashboardPage: React.FC = () => {
               </Typography>
             </CardContent>
             <CardActions sx={{ justifyContent: 'center' }}>
-              <Button size="small" variant="contained">
+              <Button 
+                size="small" 
+                variant="contained"
+                onClick={() => navigate('/workshops')}
+                data-testid="nav-workshops"
+              >
                 Browse Workshops
               </Button>
             </CardActions>

@@ -132,11 +132,11 @@ Each feature follows this workflow:
 - [ ] **MVP.4.10** Simple workshop status management
 
 ### MVP.4F Frontend Workshop System
-- [ ] **MVP.4F.1 Create Tests**: Workshop component tests with Playwright
-- [ ] **MVP.4F.2 Code**: Workshop listing and detail React components
-- [ ] **MVP.4F.3 Compile**: Workshop UI compilation
-- [ ] **MVP.4F.4 Test**: Workshop display and creation E2E tests
-- [ ] **MVP.4F.5 Docs**: Update API.md with workshop UI integration
+- [x] **MVP.4F.1 Create Tests**: Workshop component tests with Playwright
+- [x] **MVP.4F.2 Code**: Workshop listing and detail React components
+- [x] **MVP.4F.3 Compile**: Workshop UI compilation
+- [x] **MVP.4F.4 Test**: Workshop display and creation E2E tests
+- [x] **MVP.4F.5 Docs**: Update API.md with workshop UI integration
 
 #### Frontend Workshop Features:
 - [ ] **MVP.4F.6** Workshop creation form (coordinator only)

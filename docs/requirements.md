@@ -39,6 +39,25 @@ This platform supports Éducaloi's volunteer mobilization plan for legal profess
 - **Auto-save**: Automatic profile saving with error handling
 - **Search Interface**: Coordinator ability to search volunteer profiles by criteria
 
+#### 2.1.4 Workshop Frontend Interface (MVP.4F - IMPLEMENTED)
+- **Workshop Listing Page**: Comprehensive workshop browser for volunteers
+- **Advanced Search & Filtering**: Region, specialization, date, and keyword search
+- **Workshop Cards**: Clean, informative workshop displays with key details
+- **Workshop Detail Modal**: Full workshop information popup with application ability
+- **Multiple View Modes**: Grid, list, and calendar view options
+- **Real-time Filtering**: URL-persisted filters with clear/reset functionality
+- **Search Suggestions**: Auto-complete search suggestions for workshop titles
+- **Mobile-Responsive Design**: Optimized for mobile and tablet devices
+- **Loading States**: Skeleton loading for smooth user experience
+- **Empty States**: Helpful messages when no workshops match criteria
+- **Application Flow**: In-page workshop application with confirmation
+- **Status Indicators**: Visual workshop status (draft, published, cancelled, completed)
+- **Keyboard Navigation**: Full keyboard accessibility support
+- **Role-based Views**: Different interfaces for volunteers vs coordinators
+- **Coordinator Dashboard**: Workshop creation, editing, and management interface
+- **Workshop Form Validation**: Real-time validation with helpful error messages
+- **Workshop Status Management**: Draft/publish/cancel workflow for coordinators
+
 ### 2.2 Workshop Management System
 
 #### 2.2.1 Workshop Creation & Scheduling

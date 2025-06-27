@@ -9,6 +9,7 @@ import RegisterPage from './pages/RegisterPage';
 import DashboardPage from './pages/DashboardPage';
 import CoordinatorDashboardPage from './pages/CoordinatorDashboardPage';
 import ProfilePage from './pages/ProfilePage';
+import WorkshopsPage from './pages/WorkshopsPage';
 import ErrorBoundary from './components/ErrorBoundary';
 import { AuthProvider } from './contexts/AuthContext';
 import { ProtectedRoute } from './components/ProtectedRoute';
@@ -69,6 +70,12 @@ function App(): React.ReactElement {
                 <Route path="/profile" element={
                   <ProtectedRoute requiredRole="volunteer">
                     <ProfilePage />
+                  </ProtectedRoute>
+                } />
+                
+                <Route path="/workshops" element={
+                  <ProtectedRoute requiredRole="volunteer">
+                    <WorkshopsPage />
                   </ProtectedRoute>
                 } />
                 
