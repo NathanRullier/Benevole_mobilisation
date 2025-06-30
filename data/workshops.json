@@ -1,3 +1,91 @@
 {
-  "workshops": []
+  "workshops": [
+    {
+      "id": "workshop-1",
+      "title": "Introduction to Employment Law",
+      "description": "A comprehensive workshop covering the basics of employment law in Quebec. Topics include worker rights, termination procedures, and workplace harassment policies.",
+      "date": "2024-03-15",
+      "startTime": "09:00",
+      "endTime": "12:00",
+      "location": {
+        "name": "École Secondaire Jean-Baptiste-Meilleur",
+        "address": "777 Av. Sainte-Croix, Saint-Laurent, QC H4L 3Y5",
+        "city": "Saint-Laurent",
+        "region": "Montreal"
+      },
+      "maxVolunteers": 2,
+      "requiredSpecializations": ["Employment Law"],
+      "targetAudience": "Secondary School Students",
+      "workshopType": "Educational Presentation",
+      "status": "published",
+      "contactPerson": {
+        "name": "Pierre Leclerc",
+        "email": "p.leclerc@school.qc.ca",
+        "phone": "+1-514-555-0199"
+      },
+      "createdBy": "coordinator-1",
+      "applicationsCount": 0,
+      "applications": [],
+      "createdAt": "2024-01-15T12:00:00Z",
+      "updatedAt": "2024-01-15T12:00:00Z"
+    },
+    {
+      "id": "workshop-2",
+      "title": "Corporate Law Fundamentals",
+      "description": "Basic principles of corporate law for young entrepreneurs. Covers business formation, contracts, and legal compliance.",
+      "date": "2024-03-20",
+      "startTime": "14:00",
+      "endTime": "16:30",
+      "location": {
+        "name": "CÉGEP du Vieux Montréal",
+        "address": "255 Rue Ontario E, Montréal, QC H2X 1X6",
+        "city": "Montreal",
+        "region": "Montreal"
+      },
+      "maxVolunteers": 3,
+      "requiredSpecializations": ["Corporate Law"],
+      "targetAudience": "CÉGEP Students",
+      "workshopType": "Interactive Workshop",
+      "status": "published",
+      "contactPerson": {
+        "name": "Marie Dubois",
+        "email": "m.dubois@cegep.qc.ca",
+        "phone": "+1-514-555-0188"
+      },
+      "createdBy": "coordinator-1",
+      "applicationsCount": 1,
+      "applications": [],
+      "createdAt": "2024-01-16T10:00:00Z",
+      "updatedAt": "2024-01-16T10:00:00Z"
+    },
+    {
+      "id": "workshop-3",
+      "title": "Family Law Basics",
+      "description": "Introduction to family law covering divorce, custody, and support issues in Quebec.",
+      "date": "2024-03-25",
+      "startTime": "10:00",
+      "endTime": "12:00",
+      "location": {
+        "name": "Centre communautaire de Laval",
+        "address": "1681 Av. du Souvenir, Laval, QC H7S 1C7",
+        "city": "Laval",
+        "region": "Laval"
+      },
+      "maxVolunteers": 2,
+      "requiredSpecializations": ["Family Law"],
+      "targetAudience": "Community Members",
+      "workshopType": "Information Session",
+      "status": "draft",
+      "contactPerson": {
+        "name": "Jean Tremblay",
+        "email": "j.tremblay@laval.ca",
+        "phone": "+1-450-555-0177"
+      },
+      "createdBy": "coordinator-2",
+      "applicationsCount": 0,
+      "applications": [],
+      "createdAt": "2024-01-17T15:30:00Z",
+      "updatedAt": "2024-01-17T15:30:00Z"
+    }
+  ]
 } 

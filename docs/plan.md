@@ -125,11 +125,11 @@ Each feature follows this workflow:
 - [x] **MVP.4.5 Docs**: Update API.md with workshop endpoints
 
 #### MVP Workshop Features:
-- [ ] **MVP.4.6** Workshop creation form (coordinator only)
-- [ ] **MVP.4.7** Basic workshop information (title, date, location, description)
-- [ ] **MVP.4.8** Workshop listing page for volunteers
-- [ ] **MVP.4.9** Workshop detail view
-- [ ] **MVP.4.10** Simple workshop status management
+- [x] **MVP.4.6** Workshop creation form (coordinator only) - Backend API completed
+- [x] **MVP.4.7** Basic workshop information (title, date, location, description)
+- [x] **MVP.4.8** Workshop listing page for volunteers
+- [x] **MVP.4.9** Workshop detail view
+- [x] **MVP.4.10** Simple workshop status management
 
 ### MVP.4F Frontend Workshop System
 - [x] **MVP.4F.1 Create Tests**: Workshop component tests with Playwright
@@ -139,13 +139,13 @@ Each feature follows this workflow:
 - [x] **MVP.4F.5 Docs**: Update API.md with workshop UI integration
 
 #### Frontend Workshop Features:
-- [ ] **MVP.4F.6** Workshop creation form (coordinator only)
-- [ ] **MVP.4F.7** Workshop listing page with filters
-- [ ] **MVP.4F.8** Workshop detail modal/page
-- [ ] **MVP.4F.9** Workshop status indicators and management
-- [ ] **MVP.4F.10** Workshop search and filtering interface
-- [ ] **MVP.4F.11** Calendar view for workshops
-- [ ] **MVP.4F.12** Workshop location mapping integration
+- [ ] **MVP.4F.6** Workshop creation form (coordinator only) - UI placeholder created
+- [x] **MVP.4F.7** Workshop listing page with filters
+- [x] **MVP.4F.8** Workshop detail modal/page
+- [x] **MVP.4F.9** Workshop status indicators and management
+- [x] **MVP.4F.10** Workshop search and filtering interface
+- [ ] **MVP.4F.11** Calendar view for workshops - Basic date filtering implemented
+- [ ] **MVP.4F.12** Workshop location mapping integration - Location display implemented
 
 ### MVP.5 Basic Application System
 - [ ] **MVP.5.1 Create Tests**: Application workflow tests with JSON
