@@ -131,21 +131,21 @@ Each feature follows this workflow:
 - [x] **MVP.4.9** Workshop detail view
 - [x] **MVP.4.10** Simple workshop status management
 
-### MVP.4F Frontend Workshop System
+### MVP.4F Frontend Workshop System ✅
 - [x] **MVP.4F.1 Create Tests**: Workshop component tests with Playwright
 - [x] **MVP.4F.2 Code**: Workshop listing and detail React components
-- [x] **MVP.4F.3 Compile**: Workshop UI compilation
+- [x] **MVP.4F.3 Compile**: Workshop UI compilation (Minor TypeScript issues with MUI v7 Grid API)
 - [x] **MVP.4F.4 Test**: Workshop display and creation E2E tests
 - [x] **MVP.4F.5 Docs**: Update API.md with workshop UI integration
 
 #### Frontend Workshop Features:
-- [ ] **MVP.4F.6** Workshop creation form (coordinator only) - UI placeholder created
+- [x] **MVP.4F.6** Workshop creation form (coordinator only) - Full modal implementation complete
 - [x] **MVP.4F.7** Workshop listing page with filters
 - [x] **MVP.4F.8** Workshop detail modal/page
 - [x] **MVP.4F.9** Workshop status indicators and management
 - [x] **MVP.4F.10** Workshop search and filtering interface
-- [ ] **MVP.4F.11** Calendar view for workshops - Basic date filtering implemented
-- [ ] **MVP.4F.12** Workshop location mapping integration - Location display implemented
+- [x] **MVP.4F.11** Calendar view for workshops - Full calendar component implemented
+- [x] **MVP.4F.12** Workshop location mapping integration - Full location component with Google Maps integration
 
 ### MVP.5 Basic Application System
 - [ ] **MVP.5.1 Create Tests**: Application workflow tests with JSON

@@ -30,6 +30,8 @@ import { workshopService } from "../services/workshopService";
 import type { WorkshopData, WorkshopFilters } from "../services/workshopService";
 import WorkshopCard from "../components/WorkshopCard";
 import WorkshopDetailModal from "../components/WorkshopDetailModal";
+import WorkshopCreateModal from "../components/WorkshopCreateModal";
+import WorkshopCalendar from "../components/WorkshopCalendar";
 import { useAuth } from "../contexts/AuthContext";
 
 const WorkshopsPage: React.FC = () => {
@@ -44,9 +46,10 @@ const WorkshopsPage: React.FC = () => {
   const [selectedSpecialization, setSelectedSpecialization] = useState('');
   const [selectedStatus, setSelectedStatus] = useState('');
   const [selectedDate, setSelectedDate] = useState('');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [viewMode, setViewMode] = useState<'grid' | 'list' | 'calendar'>('grid');
   const [selectedWorkshop, setSelectedWorkshop] = useState<WorkshopData | null>(null);
   const [modalOpen, setModalOpen] = useState(false);
+  const [createModalOpen, setCreateModalOpen] = useState(false);
 
   // Available filter options
   const regions = [
@@ -154,8 +157,12 @@ const WorkshopsPage: React.FC = () => {
 
   // Handle workshop creation (coordinator only)
   const handleCreateWorkshop = () => {
-    // TODO: Implement create workshop modal/form
-    alert('Workshop creation form will be implemented soon');
+    setCreateModalOpen(true);
+  };
+
+  // Handle successful workshop creation
+  const handleWorkshopCreated = () => {
+    loadWorkshops(); // Refresh the workshop list
   };
 
   // Get active filters count
@@ -191,6 +198,14 @@ const WorkshopsPage: React.FC = () => {
               color={viewMode === 'grid' ? 'primary' : 'default'}
             >
               <ViewModule />
+            </IconButton>
+          </Tooltip>
+          <Tooltip title="Calendar View">
+            <IconButton
+              onClick={() => setViewMode('calendar')}
+              color={viewMode === 'calendar' ? 'primary' : 'default'}
+            >
+              <CalendarMonth />
             </IconButton>
           </Tooltip>
 
@@ -375,7 +390,13 @@ const WorkshopsPage: React.FC = () => {
       {/* Workshops list */}
       {!loading && !error && (
         <>
-          {workshops.length === 0 ? (
+          {viewMode === 'calendar' ? (
+            <WorkshopCalendar
+              workshops={workshops}
+              onWorkshopSelect={handleWorkshopSelect}
+              viewMode={isCoordinator ? 'coordinator' : 'volunteer'}
+            />
+          ) : workshops.length === 0 ? (
             <Box sx={{ textAlign: 'center', py: 8 }}>
               <Typography variant="h6" color="text.secondary" gutterBottom>
                 No workshops found
@@ -423,6 +444,15 @@ const WorkshopsPage: React.FC = () => {
         onDelete={handleWorkshopDelete}
         viewMode={isCoordinator ? 'coordinator' : 'volunteer'}
       />
+
+      {/* Workshop creation modal (coordinator only) */}
+      {isCoordinator && (
+        <WorkshopCreateModal
+          open={createModalOpen}
+          onClose={() => setCreateModalOpen(false)}
+          onSuccess={handleWorkshopCreated}
+        />
+      )}
 
       {/* Floating action button (coordinator only) */}
       {isCoordinator && (

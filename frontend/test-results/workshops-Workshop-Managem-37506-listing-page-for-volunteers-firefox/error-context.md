@@ -1,25 +1,11 @@
 # Page snapshot
 
 ```yaml
-- banner:
-  - text: Volunteer Management Platform
-  - paragraph: Éducaloi
-- main:
-  - heading "Welcome Back" [level=1]
-  - paragraph: Sign in to your volunteer account
-  - text: Email Address
-  - textbox "Email Address"
-  - text: Password
-  - textbox "Password"
-  - button "Sign In"
-  - separator
-  - paragraph:
-    - text: Don't have an account?
-    - link "Register":
-      - /url: /register
-  - paragraph:
-    - link "Forgot your password?":
-      - /url: /forgot-password
-- contentinfo:
-  - paragraph: © 2024 Éducaloi - Volunteer Management Platform
+- text: "[plugin:vite:react-babel] C:\\dev\\workspace\\AI test\\frontend\\src\\components\\WorkshopDetailModal.tsx: Unexpected character '�'. (1:0) 4 | \x00 \x00 \x00D\x00i\x00a\x00l\x00o\x00g\x00T\x00i\x00t\x00l\x00e\x00,\x00 C:/dev/workspace/AI test/frontend/src/components/WorkshopDetailModal.tsx:1:0 1 | ��i\x00m\x00p\x00o\x00r\x00t\x00 \x00R\x00e\x00a\x00c\x00t\x00,\x00 \x00{\x00 \x00u\x00s\x00e\x00S\x00t\x00a\x00t\x00e\x00 \x00}\x00 \x00f\x00r\x00o\x00m\x00 \x00\"\x00r\x00e\x00a\x00c\x00t\x00\"\x00;\x00 | ^ 2 | \x00i\x00m\x00p\x00o\x00r\x00t\x00 \x00{\x00 3 | \x00 \x00 \x00D\x00i\x00a\x00l\x00o\x00g\x00,\x00 at constructor (C:\\dev\\workspace\\AI test\\frontend\\node_modules\\@babel\\parser\\lib\\index.js:363:19) at TypeScriptParserMixin.raise (C:\\dev\\workspace\\AI test\\frontend\\node_modules\\@babel\\parser\\lib\\index.js:6609:19) at TypeScriptParserMixin.getTokenFromCode (C:\\dev\\workspace\\AI test\\frontend\\node_modules\\@babel\\parser\\lib\\index.js:6316:16) at TypeScriptParserMixin.getTokenFromCode (C:\\dev\\workspace\\AI test\\frontend\\node_modules\\@babel\\parser\\lib\\index.js:4809:11) at TypeScriptParserMixin.getTokenFromCode (C:\\dev\\workspace\\AI test\\frontend\\node_modules\\@babel\\parser\\lib\\index.js:9946:11) at TypeScriptParserMixin.nextToken (C:\\dev\\workspace\\AI test\\frontend\\node_modules\\@babel\\parser\\lib\\index.js:5792:10) at TypeScriptParserMixin.parse (C:\\dev\\workspace\\AI test\\frontend\\node_modules\\@babel\\parser\\lib\\index.js:14408:10) at TypeScriptParserMixin.parse (C:\\dev\\workspace\\AI test\\frontend\\node_modules\\@babel\\parser\\lib\\index.js:10086:18) at parse (C:\\dev\\workspace\\AI test\\frontend\\node_modules\\@babel\\parser\\lib\\index.js:14444:38) at parser (C:\\dev\\workspace\\AI test\\frontend\\node_modules\\@babel\\core\\lib\\parser\\index.js:41:34) at parser.next (<anonymous>) at normalizeFile (C:\\dev\\workspace\\AI test\\frontend\\node_modules\\@babel\\core\\lib\\transformation\\normalize-file.js:64:37) at normalizeFile.next (<anonymous>) at run (C:\\dev\\workspace\\AI test\\frontend\\node_modules\\@babel\\core\\lib\\transformation\\index.js:22:50) at run.next (<anonymous>) at transform (C:\\dev\\workspace\\AI test\\frontend\\node_modules\\@babel\\core\\lib\\transform.js:22:33) at transform.next (<anonymous>) at step (C:\\dev\\workspace\\AI test\\frontend\\node_modules\\gensync\\index.js:261:32) at C:\\dev\\workspace\\AI test\\frontend\\node_modules\\gensync\\index.js:273:13 at async.call.result.err.err (C:\\dev\\workspace\\AI test\\frontend\\node_modules\\gensync\\index.js:223:11) at C:\\dev\\workspace\\AI test\\frontend\\node_modules\\gensync\\index.js:189:28 at C:\\dev\\workspace\\AI test\\frontend\\node_modules\\@babel\\core\\lib\\gensync-utils\\async.js:67:7 at C:\\dev\\workspace\\AI test\\frontend\\node_modules\\gensync\\index.js:113:33 at step (C:\\dev\\workspace\\AI test\\frontend\\node_modules\\gensync\\index.js:287:14) at C:\\dev\\workspace\\AI test\\frontend\\node_modules\\gensync\\index.js:273:13 at async.call.result.err.err (C:\\dev\\workspace\\AI test\\frontend\\node_modules\\gensync\\index.js:223:11 Click outside, press Esc key, or fix the code to dismiss. You can also disable this overlay by setting"
+- code: server.hmr.overlay
+- text: to
+- code: "false"
+- text: in
+- code: vite.config.ts
+- text: .
 ```
