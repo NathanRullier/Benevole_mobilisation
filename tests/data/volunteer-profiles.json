@@ -1,0 +1,42 @@
+{
+  "profiles": [
+    {
+      "profileId": "429d7d04-27d3-4913-b8bf-f6a0e745b233",
+      "userId": "86a25201-c4a5-4c23-b840-6b19c7e163db",
+      "phone": "+1-514-555-9999",
+      "barAssociation": "Barreau du Québec",
+      "licenseNumber": "BQ123456",
+      "specializations": [
+        "Employment Law",
+        "Corporate Law"
+      ],
+      "experienceYears": 8,
+      "languages": [
+        "French",
+        "English"
+      ],
+      "regions": [
+        "Montreal",
+        "Laval"
+      ],
+      "bio": "Experienced employment lawyer passionate about education",
+      "availabilityPreferences": {
+        "daysOfWeek": [
+          "Monday",
+          "Wednesday",
+          "Friday"
+        ],
+        "timeSlots": [
+          "morning",
+          "afternoon"
+        ],
+        "maxWorkshopsPerMonth": 3
+      },
+      "profilePhoto": "/uploads/photos/default-avatar.jpg",
+      "createdAt": "2025-08-14T18:16:12.874Z",
+      "updatedAt": "2025-08-14T18:16:12.979Z",
+      "isActive": false,
+      "deletedAt": "2025-08-14T18:16:12.979Z"
+    }
+  ]
+}

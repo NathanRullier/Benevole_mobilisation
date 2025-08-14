@@ -15,18 +15,20 @@ function createApp() {
   const coordinatorRoutes = require('./routes/coordinator');
   const profileRoutes = require('./routes/profiles');
   const workshopRoutes = require('./routes/workshops');
+  const applicationsRoutes = require('./routes/applications');
 
   // In test environment, ensure a clean users store per app instance
   if (process.env.NODE_ENV === 'test') {
     try {
-      const { authService } = require('./middleware/auth');
-      await (async () => {
-        const fs = require('fs-extra');
-        const path = require('path');
-        const usersDir = path.dirname(authService.storage.filePath);
-        await fs.ensureDir(usersDir);
-        await authService.storage.write({ users: [] });
-      })();
+      const { setUsersFile, resolveUsersFilePath } = require('./middleware/auth');
+      const usersPath = resolveUsersFilePath();
+      setUsersFile(usersPath);
+      const fs = require('fs-extra');
+      const path = require('path');
+      fs.ensureDirSync(path.dirname(usersPath));
+      if (!fs.pathExistsSync(usersPath)) {
+        fs.writeJSONSync(usersPath, { users: [] });
+      }
     } catch (e) {
       // ignore
     }
@@ -37,6 +39,7 @@ function createApp() {
   app.use('/api/coordinator', coordinatorRoutes);
   app.use('/api/profiles', profileRoutes);
   app.use('/api/workshops', workshopRoutes);
+  app.use('/api/applications', applicationsRoutes);
 
   // Health check endpoint
   app.get('/api/health', (req, res) => {

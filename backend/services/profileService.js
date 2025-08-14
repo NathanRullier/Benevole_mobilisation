@@ -5,7 +5,8 @@ const JsonStorage = require('../utils/jsonStorage');
 
 class ProfileService {
   constructor() {
-    this.dataDir = path.join(__dirname, '../../data');
+    const isTest = process.env.NODE_ENV === 'test';
+    this.dataDir = isTest ? path.join(__dirname, '../../tests/data') : path.join(__dirname, '../../data');
     this.profilesFile = path.join(this.dataDir, 'volunteer-profiles.json');
     this.storage = new JsonStorage(this.profilesFile);
   }

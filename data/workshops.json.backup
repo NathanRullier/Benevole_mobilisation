@@ -1,0 +1,27 @@
+{
+  "workshops": [
+    {
+      "id": "test-workshop-id",
+      "title": "Employment Law Workshop",
+      "description": "Basic employment rights workshop",
+      "date": "2024-12-15",
+      "startTime": "10:00",
+      "endTime": "12:00",
+      "location": {
+        "name": "Community Center",
+        "address": "123 Main St",
+        "city": "Montreal",
+        "region": "Montreal"
+      },
+      "maxVolunteers": 2,
+      "requiredSpecializations": [
+        "Employment Law"
+      ],
+      "status": "published",
+      "createdBy": "test-coordinator-id",
+      "applicationsCount": 1,
+      "applications": [],
+      "updatedAt": "2025-08-14T18:16:13.561Z"
+    }
+  ]
+}

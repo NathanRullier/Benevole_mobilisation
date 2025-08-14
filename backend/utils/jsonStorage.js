@@ -57,14 +57,13 @@ class JsonStorage {
         if (user.role && !['volunteer', 'coordinator', 'admin'].includes(user.role)) {
           throw new Error('Schema validation failed: Invalid role');
         }
-        // Validate that user object doesn't have invalid fields
-        const validUserFields = ['id', 'email', 'firstName', 'lastName', 'role', 'phone', 'name', 'createdAt', 'updatedAt', 'password', 'isActive', 'lastLogin', 'sessions', 'status'];
-        const userFields = Object.keys(user);
-        const invalidUserFields = userFields.filter(field => !validUserFields.includes(field));
-        
-        if (invalidUserFields.length > 0) {
-          throw new Error(`Schema validation failed: Invalid user fields: ${invalidUserFields.join(', ')}`);
-        }
+		// Validate that user object doesn't have invalid fields
+		const validUserFields = ['id','email','firstName','lastName','role','phone','name','createdAt','updatedAt','password','isActive','lastLogin','sessions','status'];
+		const userFields = Object.keys(user);
+		const invalidUserFields = userFields.filter(field => !validUserFields.includes(field));
+		if (invalidUserFields.length > 0) {
+			throw new Error(`Schema validation failed: Invalid user fields: ${invalidUserFields.join(', ')}`);
+		}
       }
     }
 

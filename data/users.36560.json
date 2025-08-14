@@ -1,0 +1,43 @@
+{
+  "users": [
+    {
+      "email": "test0@example.com",
+      "password": "$2b$12$H01QMu9zPVkB60Un4D9MHe5a6x0Xf2iWSGRZMXCAgDE/cOdf2aclG",
+      "firstName": "John",
+      "lastName": "Doe",
+      "role": "volunteer",
+      "isActive": true,
+      "lastLogin": null,
+      "sessions": [],
+      "createdAt": "2025-08-14T17:38:09.036Z",
+      "updatedAt": "2025-08-14T17:38:09.036Z",
+      "id": "27fc92cb-6f81-4df9-a5dd-0779f0f9b209"
+    },
+    {
+      "email": "test1@example.com",
+      "password": "$2b$12$3tESigFw98eJElBc/ZnKr./c7mD1jVW6lrb3YHUS0Y/Fr9mX.wQYq",
+      "firstName": "John",
+      "lastName": "Doe",
+      "role": "volunteer",
+      "isActive": true,
+      "lastLogin": null,
+      "sessions": [],
+      "createdAt": "2025-08-14T17:38:09.615Z",
+      "updatedAt": "2025-08-14T17:38:09.615Z",
+      "id": "ff391936-c91c-43fc-ae9a-80b57f8eea0a"
+    },
+    {
+      "email": "test2@example.com",
+      "password": "$2b$12$su28fS8sHdvTLWlg4Y8pvuxHNPO6TZ.IW4MhkR0.BWU6cMbdmyseG",
+      "firstName": "John",
+      "lastName": "Doe",
+      "role": "volunteer",
+      "isActive": true,
+      "lastLogin": null,
+      "sessions": [],
+      "createdAt": "2025-08-14T17:38:10.062Z",
+      "updatedAt": "2025-08-14T17:38:10.062Z",
+      "id": "ff358b12-54f5-4e4e-8662-ed035585c4ed"
+    }
+  ]
+}

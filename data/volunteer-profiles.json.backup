@@ -74,7 +74,1013 @@
       ],
       "profilePhoto": "/uploads/photos/default-avatar.jpg",
       "createdAt": "2025-08-14T15:34:55.079Z",
-      "updatedAt": "2025-08-14T15:34:55.079Z",
+      "updatedAt": "2025-08-14T15:34:55.096Z",
+      "isActive": true
+    },
+    {
+      "profileId": "baa15b1f-f7d9-488a-af91-d9a8d56e6db4",
+      "userId": "44f1bdc9-ed98-4b31-b451-ea552f87b538",
+      "phone": "+1-514-555-0123",
+      "specializations": [
+        "Employment Law",
+        "Corporate Law"
+      ],
+      "profilePhoto": "/uploads/photos/default-avatar.jpg",
+      "createdAt": "2025-08-14T15:40:54.389Z",
+      "updatedAt": "2025-08-14T15:40:54.389Z",
+      "isActive": true
+    },
+    {
+      "profileId": "0e002e1d-1b71-4f09-8f5e-7176c76897e8",
+      "userId": "aa2ce366-14e9-4667-92a2-8c6e8cf3d1ac",
+      "phone": "+1-514-555-0123",
+      "specializations": [
+        "Employment Law"
+      ],
+      "languages": [
+        "French",
+        "English"
+      ],
+      "profilePhoto": "/uploads/photos/default-avatar.jpg",
+      "createdAt": "2025-08-14T15:40:58.706Z",
+      "updatedAt": "2025-08-14T15:40:58.706Z",
+      "isActive": true
+    },
+    {
+      "profileId": "2cf1506a-33f9-478f-819c-b09f182f6d34",
+      "userId": "8dfb29c4-23fb-4f37-ae21-8507442e1417",
+      "phone": "+1-514-555-9999",
+      "barAssociation": "Barreau du Québec",
+      "licenseNumber": "BQ123456",
+      "specializations": [
+        "Employment Law",
+        "Corporate Law"
+      ],
+      "experienceYears": 8,
+      "languages": [
+        "French",
+        "English"
+      ],
+      "regions": [
+        "Montreal",
+        "Laval"
+      ],
+      "bio": "Experienced employment lawyer passionate about education",
+      "availabilityPreferences": {
+        "daysOfWeek": [
+          "Monday",
+          "Wednesday",
+          "Friday"
+        ],
+        "timeSlots": [
+          "morning",
+          "afternoon"
+        ],
+        "maxWorkshopsPerMonth": 3
+      },
+      "profilePhoto": "/uploads/photos/default-avatar.jpg",
+      "createdAt": "2025-08-14T17:08:04.664Z",
+      "updatedAt": "2025-08-14T17:08:05.871Z",
+      "isActive": false,
+      "deletedAt": "2025-08-14T17:08:05.871Z"
+    },
+    {
+      "profileId": "d5661399-30c8-4e7d-9d95-9d3d60d09fe8",
+      "userId": "dc89f151-c9cb-4897-85ee-347c82eeb85b",
+      "phone": "+1-514-555-9999",
+      "barAssociation": "Barreau du Québec",
+      "licenseNumber": "BQ123456",
+      "specializations": [
+        "Employment Law",
+        "Corporate Law"
+      ],
+      "experienceYears": 8,
+      "languages": [
+        "French",
+        "English"
+      ],
+      "regions": [
+        "Montreal",
+        "Laval"
+      ],
+      "bio": "Experienced employment lawyer passionate about education",
+      "availabilityPreferences": {
+        "daysOfWeek": [
+          "Monday",
+          "Wednesday",
+          "Friday"
+        ],
+        "timeSlots": [
+          "morning",
+          "afternoon"
+        ],
+        "maxWorkshopsPerMonth": 3
+      },
+      "profilePhoto": "/uploads/photos/default-avatar.jpg",
+      "createdAt": "2025-08-14T17:09:51.389Z",
+      "updatedAt": "2025-08-14T17:09:52.415Z",
+      "isActive": true
+    },
+    {
+      "profileId": "2c88f8c5-17f2-4263-96bb-8a5055522267",
+      "userId": "bf96d367-f28b-4304-baf1-d226789e6d14",
+      "phone": "+1-514-555-0123",
+      "specializations": [
+        "Employment Law",
+        "Corporate Law"
+      ],
+      "profilePhoto": "/uploads/photos/default-avatar.jpg",
+      "createdAt": "2025-08-14T17:09:56.988Z",
+      "updatedAt": "2025-08-14T17:09:56.988Z",
+      "isActive": true
+    },
+    {
+      "profileId": "6543a4ce-3bb1-442b-80cb-d29f19a9773f",
+      "userId": "7eccd231-5844-41a2-8ef1-a7f393f1bc78",
+      "phone": "+1-514-555-0123",
+      "specializations": [
+        "Employment Law"
+      ],
+      "profilePhoto": "/uploads/photos/default-avatar.jpg",
+      "createdAt": "2025-08-14T17:11:54.178Z",
+      "updatedAt": "2025-08-14T17:11:54.198Z",
+      "isActive": true
+    },
+    {
+      "profileId": "12405816-7b5e-4bc4-94e7-86783d3b317e",
+      "userId": "ce9f4e34-9ca0-45be-b5c4-15818163922a",
+      "phone": "+1-514-555-9999",
+      "specializations": [
+        "Employment Law",
+        "Corporate Law"
+      ],
+      "languages": [
+        "French",
+        "English"
+      ],
+      "regions": [
+        "Montreal"
+      ],
+      "profilePhoto": "/uploads/photos/default-avatar.jpg",
+      "createdAt": "2025-08-14T17:37:53.381Z",
+      "updatedAt": "2025-08-14T17:37:53.784Z",
+      "isActive": true,
+      "experienceYears": 8
+    },
+    {
+      "profileId": "0326efb4-e0fa-4305-99ce-a19b2dbe164a",
+      "userId": "9ab9dcff-1e6b-4a34-af57-fcee66306ea7",
+      "phone": "+1-514-555-0123",
+      "specializations": [
+        "Employment Law",
+        "Corporate Law"
+      ],
+      "profilePhoto": "/uploads/photos/default-avatar.jpg",
+      "createdAt": "2025-08-14T17:37:57.873Z",
+      "updatedAt": "2025-08-14T17:37:57.873Z",
+      "isActive": true
+    },
+    {
+      "profileId": "997aa705-83f3-4049-be3d-4806faa3885e",
+      "userId": "d78db59c-806e-4bf1-817b-af4dc11c6e7f",
+      "phone": "+1-514-555-9999",
+      "specializations": [
+        "Employment Law",
+        "Corporate Law"
+      ],
+      "languages": [
+        "French",
+        "English"
+      ],
+      "profilePhoto": "/uploads/photos/default-avatar.jpg",
+      "createdAt": "2025-08-14T17:45:59.450Z",
+      "updatedAt": "2025-08-14T17:45:59.972Z",
+      "isActive": false,
+      "experienceYears": 8,
+      "deletedAt": "2025-08-14T17:45:59.972Z"
+    },
+    {
+      "profileId": "ebc075aa-5526-4932-809c-10da70ef4cab",
+      "userId": "b0e9fe38-54be-45b3-9a63-7d6af8581ad7",
+      "phone": "+1-514-555-0123",
+      "specializations": [
+        "Employment Law"
+      ],
+      "profilePhoto": "/uploads/photos/default-avatar.jpg",
+      "createdAt": "2025-08-14T17:46:05.553Z",
+      "updatedAt": "2025-08-14T17:46:05.574Z",
+      "isActive": true
+    },
+    {
+      "profileId": "9b6bfa46-1fb8-4e2a-8c41-5c9e3fb81de1",
+      "userId": "59f2cbfe-ef67-4982-a81b-ce3428227bc4",
+      "phone": "+1-514-555-0123",
+      "barAssociation": "Barreau du Québec",
+      "licenseNumber": "BQ123456",
+      "specializations": [
+        "Employment Law",
+        "Corporate Law"
+      ],
+      "experienceYears": 5,
+      "languages": [
+        "French",
+        "English"
+      ],
+      "regions": [
+        "Montreal",
+        "Laval"
+      ],
+      "bio": "Experienced employment lawyer passionate about education",
+      "availabilityPreferences": {
+        "daysOfWeek": [
+          "Monday",
+          "Wednesday",
+          "Friday"
+        ],
+        "timeSlots": [
+          "morning",
+          "afternoon"
+        ],
+        "maxWorkshopsPerMonth": 3
+      },
+      "profilePhoto": "/uploads/photos/default-avatar.jpg",
+      "createdAt": "2025-08-14T17:48:42.949Z",
+      "updatedAt": "2025-08-14T17:48:42.949Z",
+      "isActive": true
+    },
+    {
+      "profileId": "2efea5e3-12e7-4a6d-bada-d56c3d754395",
+      "userId": "f576c384-bc6b-4be7-84bf-4bd72de130d7",
+      "phone": "+1-514-555-0123",
+      "specializations": [
+        "Employment Law"
+      ],
+      "languages": [
+        "French"
+      ],
+      "regions": [
+        "Montreal"
+      ],
+      "profilePhoto": "/uploads/photos/default-avatar.jpg",
+      "createdAt": "2025-08-14T17:48:43.809Z",
+      "updatedAt": "2025-08-14T17:48:43.809Z",
+      "isActive": true
+    },
+    {
+      "profileId": "8027a418-2906-465e-bad4-28dd28e1fe08",
+      "userId": "25e5aba9-e4a1-4c8b-96af-c131ce146505",
+      "phone": "+1-514-555-9999",
+      "specializations": [
+        "Employment Law",
+        "Corporate Law"
+      ],
+      "languages": [
+        "French",
+        "English"
+      ],
+      "profilePhoto": "/uploads/photos/default-avatar.jpg",
+      "createdAt": "2025-08-14T17:48:44.704Z",
+      "updatedAt": "2025-08-14T17:48:44.720Z",
+      "isActive": true,
+      "experienceYears": 8
+    },
+    {
+      "profileId": "1ce66fd3-9a42-4f77-8429-8d8907ec4a48",
+      "userId": "65ba30f2-8d05-4c94-84f1-04907f9d6492",
+      "phone": "+1-514-555-0123",
+      "specializations": [
+        "Employment Law"
+      ],
+      "profilePhoto": "/uploads/photos/default-avatar.jpg",
+      "createdAt": "2025-08-14T17:48:45.566Z",
+      "updatedAt": "2025-08-14T17:48:45.576Z",
+      "isActive": false,
+      "deletedAt": "2025-08-14T17:48:45.576Z"
+    },
+    {
+      "profileId": "c6e1ff62-1045-4200-aeb7-a4a864021927",
+      "userId": "7d8f5fcd-99e6-478a-b793-137fb1dce9d2",
+      "phone": "+1-514-555-0123",
+      "specializations": [
+        "Employment Law"
+      ],
+      "profilePhoto": "/uploads/photos/default-avatar.jpg",
+      "createdAt": "2025-08-14T17:48:46.502Z",
+      "updatedAt": "2025-08-14T17:48:46.502Z",
+      "isActive": true
+    },
+    {
+      "profileId": "780b26dd-44ab-4aed-8255-5facfa460a7c",
+      "userId": "a4a8be48-bf56-4c58-9c0e-8221512c4ce1",
+      "phone": "+1-514-555-0123",
+      "specializations": [
+        "Employment Law",
+        "Corporate Law"
+      ],
+      "profilePhoto": "/uploads/photos/default-avatar.jpg",
+      "createdAt": "2025-08-14T17:48:51.735Z",
+      "updatedAt": "2025-08-14T17:48:51.735Z",
+      "isActive": true
+    },
+    {
+      "profileId": "efd09bf6-a0ed-4f1d-be8a-2f986cb83993",
+      "userId": "8f2f9a0e-104d-4b67-8602-efbf88f4b3b4",
+      "phone": "+1-514-555-0123",
+      "specializations": [
+        "Employment Law"
+      ],
+      "regions": [
+        "Montreal",
+        "Quebec City"
+      ],
+      "profilePhoto": "/uploads/photos/default-avatar.jpg",
+      "createdAt": "2025-08-14T17:48:53.377Z",
+      "updatedAt": "2025-08-14T17:48:53.377Z",
+      "isActive": true
+    },
+    {
+      "profileId": "2276c9be-3fa3-418f-a830-fd40226dfc4a",
+      "userId": "97d42b32-1896-474d-a145-2f9a1146eb6c",
+      "phone": "+1-514-555-0123",
+      "specializations": [
+        "Employment Law"
+      ],
+      "profilePhoto": "/uploads/photos/default-avatar.jpg",
+      "createdAt": "2025-08-14T17:48:55.106Z",
+      "updatedAt": "2025-08-14T17:48:55.119Z",
+      "isActive": true
+    },
+    {
+      "profileId": "63cd8fc6-4f35-4dae-83b8-5035c2af773b",
+      "userId": "7031bc26-1cf2-438c-a4e0-a1a202ec53d8",
+      "phone": "+1-514-555-0123",
+      "specializations": [
+        "Employment Law"
+      ],
+      "languages": [
+        "French",
+        "English"
+      ],
+      "profilePhoto": "/uploads/photos/default-avatar.jpg",
+      "createdAt": "2025-08-14T17:48:58.090Z",
+      "updatedAt": "2025-08-14T17:48:58.090Z",
+      "isActive": true
+    },
+    {
+      "profileId": "a0562f9a-468f-4b12-a529-f40718b731a7",
+      "userId": "7d02edda-53a2-430a-ac65-22036c08fa72",
+      "phone": "+1-514-555-0123",
+      "barAssociation": "Barreau du Québec",
+      "licenseNumber": "BQ123456",
+      "specializations": [
+        "Employment Law",
+        "Corporate Law"
+      ],
+      "experienceYears": 5,
+      "languages": [
+        "French",
+        "English"
+      ],
+      "regions": [
+        "Montreal",
+        "Laval"
+      ],
+      "bio": "Experienced employment lawyer passionate about education",
+      "availabilityPreferences": {
+        "daysOfWeek": [
+          "Monday",
+          "Wednesday",
+          "Friday"
+        ],
+        "timeSlots": [
+          "morning",
+          "afternoon"
+        ],
+        "maxWorkshopsPerMonth": 3
+      },
+      "profilePhoto": "/uploads/photos/default-avatar.jpg",
+      "createdAt": "2025-08-14T17:50:41.812Z",
+      "updatedAt": "2025-08-14T17:50:41.812Z",
+      "isActive": true
+    },
+    {
+      "profileId": "6f58dfa6-c963-4225-b753-ebc9d50015ad",
+      "userId": "79b5a912-11d0-4c4d-bcb2-29fc2267cccb",
+      "phone": "+1-514-555-0123",
+      "specializations": [
+        "Employment Law"
+      ],
+      "languages": [
+        "French"
+      ],
+      "regions": [
+        "Montreal"
+      ],
+      "profilePhoto": "/uploads/photos/default-avatar.jpg",
+      "createdAt": "2025-08-14T17:50:42.730Z",
+      "updatedAt": "2025-08-14T17:50:42.730Z",
+      "isActive": true
+    },
+    {
+      "profileId": "2c8b516f-9eaf-4b61-877c-41e0a7be0752",
+      "userId": "047c40e8-9575-4460-8a50-97d49588d34c",
+      "phone": "+1-514-555-9999",
+      "specializations": [
+        "Employment Law",
+        "Corporate Law"
+      ],
+      "languages": [
+        "French",
+        "English"
+      ],
+      "profilePhoto": "/uploads/photos/default-avatar.jpg",
+      "createdAt": "2025-08-14T17:50:43.613Z",
+      "updatedAt": "2025-08-14T17:50:43.627Z",
+      "isActive": true,
+      "experienceYears": 8
+    },
+    {
+      "profileId": "b39ef5ac-5d89-4dac-82df-22755c5e0135",
+      "userId": "64913715-6495-4777-8ebd-4a3a4b138ac5",
+      "phone": "+1-514-555-0123",
+      "specializations": [
+        "Employment Law"
+      ],
+      "profilePhoto": "/uploads/photos/default-avatar.jpg",
+      "createdAt": "2025-08-14T17:50:44.522Z",
+      "updatedAt": "2025-08-14T17:50:44.539Z",
+      "isActive": false,
+      "deletedAt": "2025-08-14T17:50:44.539Z"
+    },
+    {
+      "profileId": "f3bc8fa8-c4d5-49a2-94d8-5efc464442fe",
+      "userId": "1d432f91-775c-410b-8e51-77817e7568cd",
+      "phone": "+1-514-555-0123",
+      "specializations": [
+        "Employment Law"
+      ],
+      "profilePhoto": "/uploads/photos/default-avatar.jpg",
+      "createdAt": "2025-08-14T17:50:45.466Z",
+      "updatedAt": "2025-08-14T17:50:45.466Z",
+      "isActive": true
+    },
+    {
+      "profileId": "8105526c-6779-4596-bb5e-329098d5bef7",
+      "userId": "3b4e9fbb-829d-43ad-90e0-92bd15913839",
+      "phone": "+1-514-555-0123",
+      "specializations": [
+        "Employment Law",
+        "Corporate Law"
+      ],
+      "profilePhoto": "/uploads/photos/default-avatar.jpg",
+      "createdAt": "2025-08-14T17:50:50.857Z",
+      "updatedAt": "2025-08-14T17:50:50.857Z",
+      "isActive": true
+    },
+    {
+      "profileId": "10344743-54b4-4ea7-8eb9-84f308b583ea",
+      "userId": "54b64786-a017-4933-800c-c2c95cdf422a",
+      "phone": "+1-514-555-0123",
+      "specializations": [
+        "Employment Law"
+      ],
+      "regions": [
+        "Montreal",
+        "Quebec City"
+      ],
+      "profilePhoto": "/uploads/photos/default-avatar.jpg",
+      "createdAt": "2025-08-14T17:50:52.524Z",
+      "updatedAt": "2025-08-14T17:50:52.524Z",
+      "isActive": true
+    },
+    {
+      "profileId": "c79739cd-7c53-40e7-8f30-ac8c686c072b",
+      "userId": "c5d3c555-7141-4808-8eaa-88024f331160",
+      "phone": "+1-514-555-0123",
+      "specializations": [
+        "Employment Law"
+      ],
+      "profilePhoto": "/uploads/photos/default-avatar.jpg",
+      "createdAt": "2025-08-14T17:50:54.277Z",
+      "updatedAt": "2025-08-14T17:50:54.289Z",
+      "isActive": true
+    },
+    {
+      "profileId": "b7957c85-9bdc-4a21-af38-75881492eeb3",
+      "userId": "be8bb4d3-6706-4003-b5c5-fb11f1dc448e",
+      "phone": "+1-514-555-0123",
+      "specializations": [
+        "Employment Law"
+      ],
+      "languages": [
+        "French",
+        "English"
+      ],
+      "profilePhoto": "/uploads/photos/default-avatar.jpg",
+      "createdAt": "2025-08-14T17:50:57.225Z",
+      "updatedAt": "2025-08-14T17:50:57.225Z",
+      "isActive": true
+    },
+    {
+      "profileId": "af959209-ba16-4efe-a3bc-017efd9bc2f4",
+      "userId": "bce68103-30d7-48ae-a271-277279eba7fa",
+      "phone": "+1-514-555-0123",
+      "barAssociation": "Barreau du Québec",
+      "licenseNumber": "BQ123456",
+      "specializations": [
+        "Employment Law",
+        "Corporate Law"
+      ],
+      "experienceYears": 5,
+      "languages": [
+        "French",
+        "English"
+      ],
+      "regions": [
+        "Montreal",
+        "Laval"
+      ],
+      "bio": "Experienced employment lawyer passionate about education",
+      "availabilityPreferences": {
+        "daysOfWeek": [
+          "Monday",
+          "Wednesday",
+          "Friday"
+        ],
+        "timeSlots": [
+          "morning",
+          "afternoon"
+        ],
+        "maxWorkshopsPerMonth": 3
+      },
+      "profilePhoto": "/uploads/photos/default-avatar.jpg",
+      "createdAt": "2025-08-14T17:53:04.277Z",
+      "updatedAt": "2025-08-14T17:53:04.277Z",
+      "isActive": true
+    },
+    {
+      "profileId": "367b4d71-2463-4b7e-b0a9-041b1835cfe8",
+      "userId": "fa254f83-0553-4dc2-a498-e596ed1bb2ea",
+      "phone": "+1-514-555-0123",
+      "specializations": [
+        "Employment Law"
+      ],
+      "languages": [
+        "French"
+      ],
+      "regions": [
+        "Montreal"
+      ],
+      "profilePhoto": "/uploads/photos/default-avatar.jpg",
+      "createdAt": "2025-08-14T17:53:05.193Z",
+      "updatedAt": "2025-08-14T17:53:05.193Z",
+      "isActive": true
+    },
+    {
+      "profileId": "d3335b17-81dd-474a-a6e8-d2c69617c8eb",
+      "userId": "433a07a6-491c-45e2-a814-0674ccfc19c3",
+      "phone": "+1-514-555-9999",
+      "specializations": [
+        "Employment Law",
+        "Corporate Law"
+      ],
+      "languages": [
+        "French",
+        "English"
+      ],
+      "profilePhoto": "/uploads/photos/default-avatar.jpg",
+      "createdAt": "2025-08-14T17:53:06.167Z",
+      "updatedAt": "2025-08-14T17:53:06.199Z",
+      "isActive": true,
+      "experienceYears": 8
+    },
+    {
+      "profileId": "1941a034-869f-4c62-bb46-56638b1911c9",
+      "userId": "36840942-b893-412a-8a36-76fc245a34d6",
+      "phone": "+1-514-555-0123",
+      "specializations": [
+        "Employment Law"
+      ],
+      "profilePhoto": "/uploads/photos/default-avatar.jpg",
+      "createdAt": "2025-08-14T17:53:06.999Z",
+      "updatedAt": "2025-08-14T17:53:07.011Z",
+      "isActive": false,
+      "deletedAt": "2025-08-14T17:53:07.011Z"
+    },
+    {
+      "profileId": "b6c4afa1-2114-4c51-8870-fda6147ac888",
+      "userId": "75c68fdf-150c-46a0-b51b-e454bba0833d",
+      "phone": "+1-514-555-0123",
+      "specializations": [
+        "Employment Law"
+      ],
+      "profilePhoto": "/uploads/photos/default-avatar.jpg",
+      "createdAt": "2025-08-14T17:53:07.874Z",
+      "updatedAt": "2025-08-14T17:53:07.874Z",
+      "isActive": true
+    },
+    {
+      "profileId": "3d004cea-6602-4ab8-8bec-f52561f1799c",
+      "userId": "4e9ee6c9-ee03-4357-b135-1651f2c25882",
+      "phone": "+1-514-555-0123",
+      "specializations": [
+        "Employment Law",
+        "Corporate Law"
+      ],
+      "profilePhoto": "/uploads/photos/default-avatar.jpg",
+      "createdAt": "2025-08-14T17:53:12.228Z",
+      "updatedAt": "2025-08-14T17:53:12.228Z",
+      "isActive": true
+    },
+    {
+      "profileId": "90ab5e39-0539-447f-9468-0c4f0bde8677",
+      "userId": "ba30ca85-f339-4fc8-bed5-4bc85024e30c",
+      "phone": "+1-514-555-0123",
+      "specializations": [
+        "Employment Law"
+      ],
+      "regions": [
+        "Montreal",
+        "Quebec City"
+      ],
+      "profilePhoto": "/uploads/photos/default-avatar.jpg",
+      "createdAt": "2025-08-14T17:53:13.773Z",
+      "updatedAt": "2025-08-14T17:53:13.773Z",
+      "isActive": true
+    },
+    {
+      "profileId": "1faf4347-3677-489d-a180-ccb9a7afe039",
+      "userId": "dd56ef17-33d7-450c-9461-aead2b4a02e7",
+      "phone": "+1-514-555-0123",
+      "specializations": [
+        "Employment Law"
+      ],
+      "profilePhoto": "/uploads/photos/default-avatar.jpg",
+      "createdAt": "2025-08-14T17:53:15.405Z",
+      "updatedAt": "2025-08-14T17:53:15.422Z",
+      "isActive": true
+    },
+    {
+      "profileId": "945973eb-4da8-441b-a4cb-7bfd5eed8456",
+      "userId": "638191be-bd09-44fc-b08b-bb8cecf36fc3",
+      "phone": "+1-514-555-0123",
+      "specializations": [
+        "Employment Law"
+      ],
+      "languages": [
+        "French",
+        "English"
+      ],
+      "profilePhoto": "/uploads/photos/default-avatar.jpg",
+      "createdAt": "2025-08-14T17:53:18.147Z",
+      "updatedAt": "2025-08-14T17:53:18.147Z",
+      "isActive": true
+    },
+    {
+      "profileId": "0ebf41da-7f8a-4f62-bcce-180f3d1d867f",
+      "userId": "dc2d6efa-9ff1-467f-8176-510189b3ac12",
+      "phone": "+1-514-555-0123",
+      "barAssociation": "Barreau du Québec",
+      "licenseNumber": "BQ123456",
+      "specializations": [
+        "Employment Law",
+        "Corporate Law"
+      ],
+      "experienceYears": 5,
+      "languages": [
+        "French",
+        "English"
+      ],
+      "regions": [
+        "Montreal",
+        "Laval"
+      ],
+      "bio": "Experienced employment lawyer passionate about education",
+      "availabilityPreferences": {
+        "daysOfWeek": [
+          "Monday",
+          "Wednesday",
+          "Friday"
+        ],
+        "timeSlots": [
+          "morning",
+          "afternoon"
+        ],
+        "maxWorkshopsPerMonth": 3
+      },
+      "profilePhoto": "/uploads/photos/default-avatar.jpg",
+      "createdAt": "2025-08-14T18:04:49.900Z",
+      "updatedAt": "2025-08-14T18:04:49.900Z",
+      "isActive": true
+    },
+    {
+      "profileId": "59a06749-fdb3-4811-94d4-c4215d4e2c8b",
+      "userId": "e7a91caf-d3ef-4598-baa7-3c62d6e65abd",
+      "phone": "+1-514-555-0123",
+      "specializations": [
+        "Employment Law"
+      ],
+      "languages": [
+        "French"
+      ],
+      "regions": [
+        "Montreal"
+      ],
+      "profilePhoto": "/uploads/photos/default-avatar.jpg",
+      "createdAt": "2025-08-14T18:04:50.801Z",
+      "updatedAt": "2025-08-14T18:04:50.801Z",
+      "isActive": true
+    },
+    {
+      "profileId": "0ccb9c53-3638-4113-ba2b-0faa8078e043",
+      "userId": "324e0983-7ccb-40e0-88a4-7258aba30f64",
+      "phone": "+1-514-555-9999",
+      "specializations": [
+        "Employment Law",
+        "Corporate Law"
+      ],
+      "languages": [
+        "French",
+        "English"
+      ],
+      "profilePhoto": "/uploads/photos/default-avatar.jpg",
+      "createdAt": "2025-08-14T18:04:51.745Z",
+      "updatedAt": "2025-08-14T18:04:51.775Z",
+      "isActive": true,
+      "experienceYears": 8
+    },
+    {
+      "profileId": "e502fcea-63ba-4dcd-9473-c3e279cc7cf5",
+      "userId": "ce32af1a-94e0-4391-bf89-3ab4962373ba",
+      "phone": "+1-514-555-0123",
+      "specializations": [
+        "Employment Law"
+      ],
+      "profilePhoto": "/uploads/photos/default-avatar.jpg",
+      "createdAt": "2025-08-14T18:04:52.734Z",
+      "updatedAt": "2025-08-14T18:04:52.764Z",
+      "isActive": false,
+      "deletedAt": "2025-08-14T18:04:52.764Z"
+    },
+    {
+      "profileId": "e86cccca-cc25-4f6f-b1e7-cee91e798a7c",
+      "userId": "7f0f05cc-a4f6-43ca-9e09-b608000aa836",
+      "phone": "+1-514-555-0123",
+      "specializations": [
+        "Employment Law"
+      ],
+      "profilePhoto": "/uploads/photos/default-avatar.jpg",
+      "createdAt": "2025-08-14T18:04:53.686Z",
+      "updatedAt": "2025-08-14T18:04:53.686Z",
+      "isActive": true
+    },
+    {
+      "profileId": "c24a9f12-288d-4495-a5b4-637c6e65d28c",
+      "userId": "caea33d8-232c-4309-ba61-32082bf3a7f0",
+      "phone": "+1-514-555-0123",
+      "specializations": [
+        "Employment Law",
+        "Corporate Law"
+      ],
+      "profilePhoto": "/uploads/photos/default-avatar.jpg",
+      "createdAt": "2025-08-14T18:04:59.236Z",
+      "updatedAt": "2025-08-14T18:04:59.236Z",
+      "isActive": true
+    },
+    {
+      "profileId": "28cc4639-851d-44b9-a44a-f6341de98512",
+      "userId": "88bd723d-7bc4-4034-89db-ae5a0d3855ee",
+      "phone": "+1-514-555-0123",
+      "specializations": [
+        "Employment Law"
+      ],
+      "regions": [
+        "Montreal",
+        "Quebec City"
+      ],
+      "profilePhoto": "/uploads/photos/default-avatar.jpg",
+      "createdAt": "2025-08-14T18:05:01.122Z",
+      "updatedAt": "2025-08-14T18:05:01.122Z",
+      "isActive": true
+    },
+    {
+      "profileId": "8fc9843d-2cbb-471a-a007-86191276865c",
+      "userId": "e0343d00-7546-47dc-a4ea-5b49d39bfdeb",
+      "phone": "+1-514-555-0123",
+      "specializations": [
+        "Employment Law"
+      ],
+      "profilePhoto": "/uploads/photos/default-avatar.jpg",
+      "createdAt": "2025-08-14T18:05:03.131Z",
+      "updatedAt": "2025-08-14T18:05:03.158Z",
+      "isActive": true
+    },
+    {
+      "profileId": "1a26d4a9-b95f-44a4-a40e-adfb5d70a1a8",
+      "userId": "1f222fde-33d0-4c0b-af5d-5cbb38e3c86c",
+      "phone": "+1-514-555-0123",
+      "specializations": [
+        "Employment Law"
+      ],
+      "languages": [
+        "French",
+        "English"
+      ],
+      "profilePhoto": "/uploads/photos/default-avatar.jpg",
+      "createdAt": "2025-08-14T18:05:06.326Z",
+      "updatedAt": "2025-08-14T18:05:06.326Z",
+      "isActive": true
+    },
+    {
+      "profileId": "67df18ef-1838-4ea1-bed8-24fc2469f30b",
+      "userId": "e07964aa-6c96-4681-8bfb-4622141a2229",
+      "phone": "+1-514-555-0123",
+      "barAssociation": "Barreau du Québec",
+      "licenseNumber": "BQ123456",
+      "specializations": [
+        "Employment Law",
+        "Corporate Law"
+      ],
+      "experienceYears": 5,
+      "languages": [
+        "French",
+        "English"
+      ],
+      "regions": [
+        "Montreal",
+        "Laval"
+      ],
+      "bio": "Experienced employment lawyer passionate about education",
+      "availabilityPreferences": {
+        "daysOfWeek": [
+          "Monday",
+          "Wednesday",
+          "Friday"
+        ],
+        "timeSlots": [
+          "morning",
+          "afternoon"
+        ],
+        "maxWorkshopsPerMonth": 3
+      },
+      "profilePhoto": "/uploads/photos/default-avatar.jpg",
+      "createdAt": "2025-08-14T18:06:33.039Z",
+      "updatedAt": "2025-08-14T18:06:33.039Z",
+      "isActive": true
+    },
+    {
+      "profileId": "f300e59f-139c-441c-831c-033621aa43fe",
+      "userId": "e8580925-b60e-4d5b-ac0d-16f4e5650375",
+      "phone": "+1-514-555-0123",
+      "specializations": [
+        "Employment Law"
+      ],
+      "languages": [
+        "French"
+      ],
+      "regions": [
+        "Montreal"
+      ],
+      "profilePhoto": "/uploads/photos/default-avatar.jpg",
+      "createdAt": "2025-08-14T18:06:33.805Z",
+      "updatedAt": "2025-08-14T18:06:33.805Z",
+      "isActive": true
+    },
+    {
+      "profileId": "a660071c-9ae1-4590-9a41-5b249fd71a01",
+      "userId": "fe9291a0-0a46-4d1d-b844-38e0478bd154",
+      "phone": "+1-514-555-9999",
+      "specializations": [
+        "Employment Law",
+        "Corporate Law"
+      ],
+      "languages": [
+        "French",
+        "English"
+      ],
+      "profilePhoto": "/uploads/photos/default-avatar.jpg",
+      "createdAt": "2025-08-14T18:06:34.620Z",
+      "updatedAt": "2025-08-14T18:06:34.638Z",
+      "isActive": true,
+      "experienceYears": 8
+    },
+    {
+      "profileId": "a4191ebb-7303-474c-be29-97d4fb91a28b",
+      "userId": "cd919337-be9c-41cd-8758-4f82e7f7b571",
+      "phone": "+1-514-555-0123",
+      "specializations": [
+        "Employment Law"
+      ],
+      "profilePhoto": "/uploads/photos/default-avatar.jpg",
+      "createdAt": "2025-08-14T18:06:35.564Z",
+      "updatedAt": "2025-08-14T18:06:35.577Z",
+      "isActive": false,
+      "deletedAt": "2025-08-14T18:06:35.577Z"
+    },
+    {
+      "profileId": "5ceab1e2-f0f5-47c1-8fca-887bf425f621",
+      "userId": "890db7cb-96f2-4111-9e7a-25ba92c02104",
+      "phone": "+1-514-555-0123",
+      "specializations": [
+        "Employment Law"
+      ],
+      "profilePhoto": "/uploads/photos/default-avatar.jpg",
+      "createdAt": "2025-08-14T18:06:36.472Z",
+      "updatedAt": "2025-08-14T18:06:36.472Z",
+      "isActive": true
+    },
+    {
+      "profileId": "2ae19c39-2f0d-4d72-9a96-d9de20dc20e4",
+      "userId": "bda20d16-b7e3-4783-a5e5-239c171895de",
+      "phone": "+1-514-555-0123",
+      "specializations": [
+        "Employment Law",
+        "Corporate Law"
+      ],
+      "profilePhoto": "/uploads/photos/default-avatar.jpg",
+      "createdAt": "2025-08-14T18:06:41.236Z",
+      "updatedAt": "2025-08-14T18:06:41.237Z",
+      "isActive": true
+    },
+    {
+      "profileId": "ded26ffa-3ef0-4300-a28a-dd5ad2b407cd",
+      "userId": "7a26c51a-4609-48a4-8625-7c4e58b1a32d",
+      "phone": "+1-514-555-0123",
+      "specializations": [
+        "Employment Law"
+      ],
+      "regions": [
+        "Montreal",
+        "Quebec City"
+      ],
+      "profilePhoto": "/uploads/photos/default-avatar.jpg",
+      "createdAt": "2025-08-14T18:06:42.596Z",
+      "updatedAt": "2025-08-14T18:06:42.596Z",
+      "isActive": true
+    },
+    {
+      "profileId": "e8d2791e-d301-48a0-8ba3-fb3eeacba0ea",
+      "userId": "6f38b2c5-0514-4e30-8567-19526742b64a",
+      "phone": "+1-514-555-0123",
+      "specializations": [
+        "Employment Law"
+      ],
+      "profilePhoto": "/uploads/photos/default-avatar.jpg",
+      "createdAt": "2025-08-14T18:06:44.268Z",
+      "updatedAt": "2025-08-14T18:06:44.282Z",
+      "isActive": true
+    },
+    {
+      "profileId": "d23be8c8-d14d-474a-b49e-fd0c908e4d97",
+      "userId": "93f1c08a-0bdf-4f89-b873-8a21e0f4f02c",
+      "phone": "+1-514-555-0123",
+      "specializations": [
+        "Employment Law"
+      ],
+      "languages": [
+        "French",
+        "English"
+      ],
+      "profilePhoto": "/uploads/photos/default-avatar.jpg",
+      "createdAt": "2025-08-14T18:06:47.228Z",
+      "updatedAt": "2025-08-14T18:06:47.228Z",
+      "isActive": true
+    },
+    {
+      "profileId": "5498065d-3296-47db-a70b-fb828e488dd1",
+      "userId": "86a25201-c4a5-4c23-b840-6b19c7e163db",
+      "phone": "+1-514-555-9999",
+      "barAssociation": "Barreau du Québec",
+      "licenseNumber": "BQ123456",
+      "specializations": [
+        "Employment Law",
+        "Corporate Law"
+      ],
+      "experienceYears": 8,
+      "languages": [
+        "French",
+        "English"
+      ],
+      "regions": [
+        "Montreal",
+        "Laval"
+      ],
+      "bio": "Experienced employment lawyer passionate about education",
+      "availabilityPreferences": {
+        "daysOfWeek": [
+          "Monday",
+          "Wednesday",
+          "Friday"
+        ],
+        "timeSlots": [
+          "morning",
+          "afternoon"
+        ],
+        "maxWorkshopsPerMonth": 3
+      },
+      "profilePhoto": "/uploads/photos/default-avatar.jpg",
+      "createdAt": "2025-08-14T18:07:49.858Z",
+      "updatedAt": "2025-08-14T18:07:50.542Z",
       "isActive": true
     }
   ]

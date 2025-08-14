@@ -1,0 +1,126 @@
+{
+  "users": [
+    {
+      "email": "test@example.com",
+      "password": "$2b$12$jzcbYwJ1XjU7tfqC8XEhXeC8NWNDdPic0QrlqyD0gWmUsw/VqQZt.",
+      "firstName": "John",
+      "lastName": "Doe",
+      "role": "volunteer",
+      "isActive": true,
+      "lastLogin": "2025-08-14T17:10:05.965Z",
+      "sessions": [
+        {
+          "id": "31020b42-3013-42bc-82cf-663ea4fe498b",
+          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI3YTA0NDU2NC0xMWUyLTQ3NGItYTA2My1lOWZhNGE3YTdlMjciLCJlbWFpbCI6InRlc3RAZXhhbXBsZS5jb20iLCJyb2xlIjoidm9sdW50ZWVyIiwic2Vzc2lvbklkIjoiMzEwMjBiNDItMzAxMy00MmJjLTgyY2YtNjYzZWE0ZmU0OThiIiwiaWF0IjoxNzU1MTkxNDA1LCJleHAiOjE3NTUyNzc4MDUsImF1ZCI6InZvbHVudGVlci1wbGF0Zm9ybS11c2VycyIsImlzcyI6InZvbHVudGVlci1wbGF0Zm9ybSJ9.AgaJi6-HTkLW66gS-4zK9XVLtWa8rei2PCycrM-HiFE",
+          "createdAt": "2025-08-14T17:10:05.462Z",
+          "isActive": true,
+          "userAgent": "",
+          "ipAddress": ""
+        },
+        {
+          "id": "827a3833-a3b4-4ee3-a92e-8bbf8ecd3234",
+          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI3YTA0NDU2NC0xMWUyLTQ3NGItYTA2My1lOWZhNGE3YTdlMjciLCJlbWFpbCI6InRlc3RAZXhhbXBsZS5jb20iLCJyb2xlIjoidm9sdW50ZWVyIiwic2Vzc2lvbklkIjoiODI3YTM4MzMtYTNiNC00ZWUzLWE5MmUtOGJiZjhlY2QzMjM0IiwiaWF0IjoxNzU1MTkxNDA1LCJleHAiOjE3NTUyNzc4MDUsImF1ZCI6InZvbHVudGVlci1wbGF0Zm9ybS11c2VycyIsImlzcyI6InZvbHVudGVlci1wbGF0Zm9ybSJ9.BtOabLrJcZ28xkSNaXglAV_7JKoUx_wTmpW9t71UNJ0",
+          "createdAt": "2025-08-14T17:10:05.965Z",
+          "isActive": false,
+          "userAgent": "",
+          "ipAddress": "",
+          "loggedOutAt": "2025-08-14T17:10:05.980Z"
+        }
+      ],
+      "createdAt": "2025-08-14T17:10:05.077Z",
+      "updatedAt": "2025-08-14T17:10:05.981Z",
+      "id": "7a044564-11e2-474b-a063-e9fa4a7a7e27"
+    },
+    {
+      "email": "coordinator@example.com",
+      "password": "$2b$12$Uz/PhuMLq7xFVyBce7W4L.f7eT29Z5GXSCGWRcAdnMj1wR0RQuw3O",
+      "firstName": "Jane",
+      "lastName": "Coordinator",
+      "role": "coordinator",
+      "isActive": true,
+      "lastLogin": "2025-08-14T17:10:06.886Z",
+      "sessions": [
+        {
+          "id": "183bcae8-e92c-48cf-8058-b4f56701f86b",
+          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIzMjRjODJlNS01MGNhLTQ4YTYtOWZhYS0yMzExMzA0Y2FmM2IiLCJlbWFpbCI6ImNvb3JkaW5hdG9yQGV4YW1wbGUuY29tIiwicm9sZSI6ImNvb3JkaW5hdG9yIiwic2Vzc2lvbklkIjoiMTgzYmNhZTgtZTkyYy00OGNmLTgwNTgtYjRmNTY3MDFmODZiIiwiaWF0IjoxNzU1MTkxNDA2LCJleHAiOjE3NTUyNzc4MDYsImF1ZCI6InZvbHVudGVlci1wbGF0Zm9ybS11c2VycyIsImlzcyI6InZvbHVudGVlci1wbGF0Zm9ybSJ9.opQIn8_BFaSM3jg8_P75YD5bPba10XdOP8FoYGBY-ZY",
+          "createdAt": "2025-08-14T17:10:06.886Z",
+          "isActive": true,
+          "userAgent": "",
+          "ipAddress": ""
+        }
+      ],
+      "createdAt": "2025-08-14T17:10:06.388Z",
+      "updatedAt": "2025-08-14T17:10:06.888Z",
+      "id": "324c82e5-50ca-48a6-9faa-2311304caf3b"
+    },
+    {
+      "email": "volunteer@example.com",
+      "password": "$2b$12$Jr4j4N65TmJzTkZw8ZWAWOOAMnLYPELHD4s5ZB2bTJkvabxe2Ecse",
+      "firstName": "John",
+      "lastName": "Volunteer",
+      "role": "volunteer",
+      "isActive": true,
+      "lastLogin": "2025-08-14T17:10:08.158Z",
+      "sessions": [
+        {
+          "id": "bcd64e11-c1fc-42a8-94e9-405772578edd",
+          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIyOGI4MGRhMS03ZWJjLTQzN2EtYWJlMy1mM2ZlZWZjNDBkMjYiLCJlbWFpbCI6InZvbHVudGVlckBleGFtcGxlLmNvbSIsInJvbGUiOiJ2b2x1bnRlZXIiLCJzZXNzaW9uSWQiOiJiY2Q2NGUxMS1jMWZjLTQyYTgtOTRlOS00MDU3NzI1NzhlZGQiLCJpYXQiOjE3NTUxOTE0MDcsImV4cCI6MTc1NTI3NzgwNywiYXVkIjoidm9sdW50ZWVyLXBsYXRmb3JtLXVzZXJzIiwiaXNzIjoidm9sdW50ZWVyLXBsYXRmb3JtIn0.G_vPyhq6pS1IkeizS80nup4G25QbgtijU4h_SFUrlKQ",
+          "createdAt": "2025-08-14T17:10:07.738Z",
+          "isActive": true,
+          "userAgent": "",
+          "ipAddress": ""
+        },
+        {
+          "id": "df0c7be6-2bd1-4210-97fc-6bcc365c3556",
+          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIyOGI4MGRhMS03ZWJjLTQzN2EtYWJlMy1mM2ZlZWZjNDBkMjYiLCJlbWFpbCI6InZvbHVudGVlckBleGFtcGxlLmNvbSIsInJvbGUiOiJ2b2x1bnRlZXIiLCJzZXNzaW9uSWQiOiJkZjBjN2JlNi0yYmQxLTQyMTAtOTdmYy02YmNjMzY1YzM1NTYiLCJpYXQiOjE3NTUxOTE0MDgsImV4cCI6MTc1NTI3NzgwOCwiYXVkIjoidm9sdW50ZWVyLXBsYXRmb3JtLXVzZXJzIiwiaXNzIjoidm9sdW50ZWVyLXBsYXRmb3JtIn0.h1wtrsmlSMA6dRXsphvEx1DocMTuh423kCITxnkG8hs",
+          "createdAt": "2025-08-14T17:10:08.158Z",
+          "isActive": true,
+          "userAgent": "",
+          "ipAddress": ""
+        }
+      ],
+      "createdAt": "2025-08-14T17:10:07.279Z",
+      "updatedAt": "2025-08-14T17:10:08.163Z",
+      "id": "28b80da1-7ebc-437a-abe3-f3feefc40d26"
+    },
+    {
+      "email": "test0@example.com",
+      "password": "$2b$12$1XHoKQHkPgItQYJlP6ZueOW9CXszL18f/FFSh2MFsYRppLiqYcKh.",
+      "firstName": "John",
+      "lastName": "Doe",
+      "role": "volunteer",
+      "isActive": true,
+      "lastLogin": null,
+      "sessions": [],
+      "createdAt": "2025-08-14T17:10:08.577Z",
+      "updatedAt": "2025-08-14T17:10:08.577Z",
+      "id": "ac2b32e1-be09-4df7-b4ed-3f29b35d7e71"
+    },
+    {
+      "email": "test1@example.com",
+      "password": "$2b$12$sSGYfjX9IMIkCjnSEJlNnulhub/5UPPomQy.yyDTDHSpCKKQchpnS",
+      "firstName": "John",
+      "lastName": "Doe",
+      "role": "volunteer",
+      "isActive": true,
+      "lastLogin": null,
+      "sessions": [],
+      "createdAt": "2025-08-14T17:10:08.941Z",
+      "updatedAt": "2025-08-14T17:10:08.941Z",
+      "id": "4b2d0d0d-76fe-4b72-8977-f04875c6a912"
+    },
+    {
+      "email": "test2@example.com",
+      "password": "$2b$12$Wx6gWMjZkUjeo4EquCqodOn8BThj7SoHUAbtFJQS78v3adOOof3UK",
+      "firstName": "John",
+      "lastName": "Doe",
+      "role": "volunteer",
+      "isActive": true,
+      "lastLogin": null,
+      "sessions": [],
+      "createdAt": "2025-08-14T17:10:09.433Z",
+      "updatedAt": "2025-08-14T17:10:09.433Z",
+      "id": "e401326f-6676-4aed-a58b-fdc533fbc0b8"
+    }
+  ]
+}

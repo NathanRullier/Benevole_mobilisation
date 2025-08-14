@@ -1,0 +1,181 @@
+{
+  "users": [
+    {
+      "email": "volunteer@example.com",
+      "password": "$2b$12$GqHMu5xn5iYX9nuGkUMh4.RNfk3CsGr4JLfQgNmnzI1nOw8IylRHy",
+      "firstName": "John",
+      "lastName": "Volunteer",
+      "role": "volunteer",
+      "isActive": true,
+      "lastLogin": "2025-08-14T17:08:11.299Z",
+      "sessions": [
+        {
+          "id": "63596fd2-0815-45e7-a508-788e6ae50fc6",
+          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI4ZGZiMjljNC0yM2ZiLTRmMzctYWUyMS04NTA3NDQyZTE0MTciLCJlbWFpbCI6InZvbHVudGVlckBleGFtcGxlLmNvbSIsInJvbGUiOiJ2b2x1bnRlZXIiLCJzZXNzaW9uSWQiOiI2MzU5NmZkMi0wODE1LTQ1ZTctYTUwOC03ODhlNmFlNTBmYzYiLCJpYXQiOjE3NTUxOTEyODQsImV4cCI6MTc1NTI3NzY4NCwiYXVkIjoidm9sdW50ZWVyLXBsYXRmb3JtLXVzZXJzIiwiaXNzIjoidm9sdW50ZWVyLXBsYXRmb3JtIn0.yBAD1oHhnpJgXc8ByLBaUGnEau9FwJN3KyEDGYsWA_g",
+          "createdAt": "2025-08-14T17:08:04.637Z",
+          "isActive": true,
+          "userAgent": "",
+          "ipAddress": ""
+        },
+        {
+          "id": "f24068a4-e54e-47ae-9ed0-58a373f30a10",
+          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI4ZGZiMjljNC0yM2ZiLTRmMzctYWUyMS04NTA3NDQyZTE0MTciLCJlbWFpbCI6InZvbHVudGVlckBleGFtcGxlLmNvbSIsInJvbGUiOiJ2b2x1bnRlZXIiLCJzZXNzaW9uSWQiOiJmMjQwNjhhNC1lNTRlLTQ3YWUtOWVkMC01OGEzNzNmMzBhMTAiLCJpYXQiOjE3NTUxOTEyODQsImV4cCI6MTc1NTI3NzY4NCwiYXVkIjoidm9sdW50ZWVyLXBsYXRmb3JtLXVzZXJzIiwiaXNzIjoidm9sdW50ZWVyLXBsYXRmb3JtIn0.tR2ri9k18sb3v-qhinRbVCnLsArwz2_rkDn8HTajyGI",
+          "createdAt": "2025-08-14T17:08:04.943Z",
+          "isActive": true,
+          "userAgent": "",
+          "ipAddress": ""
+        },
+        {
+          "id": "1c739e86-8e45-4708-9f40-adfdb5f95e22",
+          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI4ZGZiMjljNC0yM2ZiLTRmMzctYWUyMS04NTA3NDQyZTE0MTciLCJlbWFpbCI6InZvbHVudGVlckBleGFtcGxlLmNvbSIsInJvbGUiOiJ2b2x1bnRlZXIiLCJzZXNzaW9uSWQiOiIxYzczOWU4Ni04ZTQ1LTQ3MDgtOWY0MC1hZGZkYjVmOTVlMjIiLCJpYXQiOjE3NTUxOTEyODUsImV4cCI6MTc1NTI3NzY4NSwiYXVkIjoidm9sdW50ZWVyLXBsYXRmb3JtLXVzZXJzIiwiaXNzIjoidm9sdW50ZWVyLXBsYXRmb3JtIn0.lCE1ANrRqqjNj7Wlr_8Oh2b5zr9JING1H1dAHP3zT_A",
+          "createdAt": "2025-08-14T17:08:05.354Z",
+          "isActive": true,
+          "userAgent": "",
+          "ipAddress": ""
+        },
+        {
+          "id": "b3eb346c-70eb-4796-b143-feae06f8ed51",
+          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI4ZGZiMjljNC0yM2ZiLTRmMzctYWUyMS04NTA3NDQyZTE0MTciLCJlbWFpbCI6InZvbHVudGVlckBleGFtcGxlLmNvbSIsInJvbGUiOiJ2b2x1bnRlZXIiLCJzZXNzaW9uSWQiOiJiM2ViMzQ2Yy03MGViLTQ3OTYtYjE0My1mZWFlMDZmOGVkNTEiLCJpYXQiOjE3NTUxOTEyODUsImV4cCI6MTc1NTI3NzY4NSwiYXVkIjoidm9sdW50ZWVyLXBsYXRmb3JtLXVzZXJzIiwiaXNzIjoidm9sdW50ZWVyLXBsYXRmb3JtIn0.nF2gn0YqAHCz8pM0U4YYeeP0GrJkEWE1tFVoeYFfSvw",
+          "createdAt": "2025-08-14T17:08:05.751Z",
+          "isActive": true,
+          "userAgent": "",
+          "ipAddress": ""
+        },
+        {
+          "id": "b08218b4-cf87-4225-a496-dfbdc2cf0303",
+          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI4ZGZiMjljNC0yM2ZiLTRmMzctYWUyMS04NTA3NDQyZTE0MTciLCJlbWFpbCI6InZvbHVudGVlckBleGFtcGxlLmNvbSIsInJvbGUiOiJ2b2x1bnRlZXIiLCJzZXNzaW9uSWQiOiJiMDgyMThiNC1jZjg3LTQyMjUtYTQ5Ni1kZmJkYzJjZjAzMDMiLCJpYXQiOjE3NTUxOTEyODYsImV4cCI6MTc1NTI3NzY4NiwiYXVkIjoidm9sdW50ZWVyLXBsYXRmb3JtLXVzZXJzIiwiaXNzIjoidm9sdW50ZWVyLXBsYXRmb3JtIn0.3-Bms36adwG_A94WjX2iT98LpFFQN5MVavf33errftc",
+          "createdAt": "2025-08-14T17:08:06.136Z",
+          "isActive": true,
+          "userAgent": "",
+          "ipAddress": ""
+        },
+        {
+          "id": "1ff0957c-1d2a-4bc5-bac4-ec350f206151",
+          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI4ZGZiMjljNC0yM2ZiLTRmMzctYWUyMS04NTA3NDQyZTE0MTciLCJlbWFpbCI6InZvbHVudGVlckBleGFtcGxlLmNvbSIsInJvbGUiOiJ2b2x1bnRlZXIiLCJzZXNzaW9uSWQiOiIxZmYwOTU3Yy0xZDJhLTRiYzUtYmFjNC1lYzM1MGYyMDYxNTEiLCJpYXQiOjE3NTUxOTEyODYsImV4cCI6MTc1NTI3NzY4NiwiYXVkIjoidm9sdW50ZWVyLXBsYXRmb3JtLXVzZXJzIiwiaXNzIjoidm9sdW50ZWVyLXBsYXRmb3JtIn0.TvkCLGmS10NzIsXSAlzVvfma_ilhFV93Pz-gmLHTeyI",
+          "createdAt": "2025-08-14T17:08:06.392Z",
+          "isActive": true,
+          "userAgent": "",
+          "ipAddress": ""
+        },
+        {
+          "id": "00bc66af-3f00-49b4-a15d-76ebd350aea7",
+          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI4ZGZiMjljNC0yM2ZiLTRmMzctYWUyMS04NTA3NDQyZTE0MTciLCJlbWFpbCI6InZvbHVudGVlckBleGFtcGxlLmNvbSIsInJvbGUiOiJ2b2x1bnRlZXIiLCJzZXNzaW9uSWQiOiIwMGJjNjZhZi0zZjAwLTQ5YjQtYTE1ZC03NmViZDM1MGFlYTciLCJpYXQiOjE3NTUxOTEyODYsImV4cCI6MTc1NTI3NzY4NiwiYXVkIjoidm9sdW50ZWVyLXBsYXRmb3JtLXVzZXJzIiwiaXNzIjoidm9sdW50ZWVyLXBsYXRmb3JtIn0.Abxd2P4JBONwgyP6lqyEB3O4pyt9214wDcnithnkb0Y",
+          "createdAt": "2025-08-14T17:08:06.759Z",
+          "isActive": true,
+          "userAgent": "",
+          "ipAddress": ""
+        },
+        {
+          "id": "76bf4a60-1632-4adb-b02f-9e8b17b985b3",
+          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI4ZGZiMjljNC0yM2ZiLTRmMzctYWUyMS04NTA3NDQyZTE0MTciLCJlbWFpbCI6InZvbHVudGVlckBleGFtcGxlLmNvbSIsInJvbGUiOiJ2b2x1bnRlZXIiLCJzZXNzaW9uSWQiOiI3NmJmNGE2MC0xNjMyLTRhZGItYjAyZi05ZThiMTdiOTg1YjMiLCJpYXQiOjE3NTUxOTEyODcsImV4cCI6MTc1NTI3NzY4NywiYXVkIjoidm9sdW50ZWVyLXBsYXRmb3JtLXVzZXJzIiwiaXNzIjoidm9sdW50ZWVyLXBsYXRmb3JtIn0.ZnDI55Qx9ixawcjmeydNGBtuu58QMiTWUqPHP-wxhro",
+          "createdAt": "2025-08-14T17:08:07.129Z",
+          "isActive": true,
+          "userAgent": "",
+          "ipAddress": ""
+        },
+        {
+          "id": "a2e91bd4-9ba4-4c60-bc8f-ed21c1dc387a",
+          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI4ZGZiMjljNC0yM2ZiLTRmMzctYWUyMS04NTA3NDQyZTE0MTciLCJlbWFpbCI6InZvbHVudGVlckBleGFtcGxlLmNvbSIsInJvbGUiOiJ2b2x1bnRlZXIiLCJzZXNzaW9uSWQiOiJhMmU5MWJkNC05YmE0LTRjNjAtYmM4Zi1lZDIxYzFkYzM4N2EiLCJpYXQiOjE3NTUxOTEyODcsImV4cCI6MTc1NTI3NzY4NywiYXVkIjoidm9sdW50ZWVyLXBsYXRmb3JtLXVzZXJzIiwiaXNzIjoidm9sdW50ZWVyLXBsYXRmb3JtIn0.GhDpQomlaIYVJe2uGaElGPpCNdHpspMyaB9JNDH2v1c",
+          "createdAt": "2025-08-14T17:08:07.504Z",
+          "isActive": true,
+          "userAgent": "",
+          "ipAddress": ""
+        },
+        {
+          "id": "de71ae30-99df-406a-ac77-acec3cd6e9d7",
+          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI4ZGZiMjljNC0yM2ZiLTRmMzctYWUyMS04NTA3NDQyZTE0MTciLCJlbWFpbCI6InZvbHVudGVlckBleGFtcGxlLmNvbSIsInJvbGUiOiJ2b2x1bnRlZXIiLCJzZXNzaW9uSWQiOiJkZTcxYWUzMC05OWRmLTQwNmEtYWM3Ny1hY2VjM2NkNmU5ZDciLCJpYXQiOjE3NTUxOTEyODcsImV4cCI6MTc1NTI3NzY4NywiYXVkIjoidm9sdW50ZWVyLXBsYXRmb3JtLXVzZXJzIiwiaXNzIjoidm9sdW50ZWVyLXBsYXRmb3JtIn0.C2TPypuca1jMzJ3jrfX0c7Ywg2agPIYIWvQuC9kASqA",
+          "createdAt": "2025-08-14T17:08:07.887Z",
+          "isActive": true,
+          "userAgent": "",
+          "ipAddress": ""
+        },
+        {
+          "id": "e3195460-b0d0-4979-a092-6d4b405f17b1",
+          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI4ZGZiMjljNC0yM2ZiLTRmMzctYWUyMS04NTA3NDQyZTE0MTciLCJlbWFpbCI6InZvbHVudGVlckBleGFtcGxlLmNvbSIsInJvbGUiOiJ2b2x1bnRlZXIiLCJzZXNzaW9uSWQiOiJlMzE5NTQ2MC1iMGQwLTQ5NzktYTA5Mi02ZDRiNDA1ZjE3YjEiLCJpYXQiOjE3NTUxOTEyODksImV4cCI6MTc1NTI3NzY4OSwiYXVkIjoidm9sdW50ZWVyLXBsYXRmb3JtLXVzZXJzIiwiaXNzIjoidm9sdW50ZWVyLXBsYXRmb3JtIn0.c9kL7sHkN-GpGNvQlfARkOLTe4U6owZ9rdt3TRxdQ0U",
+          "createdAt": "2025-08-14T17:08:09.330Z",
+          "isActive": true,
+          "userAgent": "",
+          "ipAddress": ""
+        },
+        {
+          "id": "ed1d5554-fcdc-43b1-96d9-6b9c4e202137",
+          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI4ZGZiMjljNC0yM2ZiLTRmMzctYWUyMS04NTA3NDQyZTE0MTciLCJlbWFpbCI6InZvbHVudGVlckBleGFtcGxlLmNvbSIsInJvbGUiOiJ2b2x1bnRlZXIiLCJzZXNzaW9uSWQiOiJlZDFkNTU1NC1mY2RjLTQzYjEtOTZkOS02YjljNGUyMDIxMzciLCJpYXQiOjE3NTUxOTEyODksImV4cCI6MTc1NTI3NzY4OSwiYXVkIjoidm9sdW50ZWVyLXBsYXRmb3JtLXVzZXJzIiwiaXNzIjoidm9sdW50ZWVyLXBsYXRmb3JtIn0.McrEVZy-_SYjCy-kOTj2EIL0o39QPz_kZg6SYBHtTa8",
+          "createdAt": "2025-08-14T17:08:09.723Z",
+          "isActive": true,
+          "userAgent": "",
+          "ipAddress": ""
+        },
+        {
+          "id": "5c969212-dee6-4b78-b057-42bb3b6b32c7",
+          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI4ZGZiMjljNC0yM2ZiLTRmMzctYWUyMS04NTA3NDQyZTE0MTciLCJlbWFpbCI6InZvbHVudGVlckBleGFtcGxlLmNvbSIsInJvbGUiOiJ2b2x1bnRlZXIiLCJzZXNzaW9uSWQiOiI1Yzk2OTIxMi1kZWU2LTRiNzgtYjA1Ny00MmJiM2I2YjMyYzciLCJpYXQiOjE3NTUxOTEyOTAsImV4cCI6MTc1NTI3NzY5MCwiYXVkIjoidm9sdW50ZWVyLXBsYXRmb3JtLXVzZXJzIiwiaXNzIjoidm9sdW50ZWVyLXBsYXRmb3JtIn0.0dRiHa_EcXB_02grCnPWFKFzJHJ3etoepj2zys_y3X0",
+          "createdAt": "2025-08-14T17:08:10.104Z",
+          "isActive": true,
+          "userAgent": "",
+          "ipAddress": ""
+        },
+        {
+          "id": "315c72da-d895-44d8-a5e5-ba731c43d1e1",
+          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI4ZGZiMjljNC0yM2ZiLTRmMzctYWUyMS04NTA3NDQyZTE0MTciLCJlbWFpbCI6InZvbHVudGVlckBleGFtcGxlLmNvbSIsInJvbGUiOiJ2b2x1bnRlZXIiLCJzZXNzaW9uSWQiOiIzMTVjNzJkYS1kODk1LTQ0ZDgtYTVlNS1iYTczMWM0M2QxZTEiLCJpYXQiOjE3NTUxOTEyOTAsImV4cCI6MTc1NTI3NzY5MCwiYXVkIjoidm9sdW50ZWVyLXBsYXRmb3JtLXVzZXJzIiwiaXNzIjoidm9sdW50ZWVyLXBsYXRmb3JtIn0.J4STQukBGSFe_e6Odd9hi_0UBgXzwfGfrjb5YNKkaOI",
+          "createdAt": "2025-08-14T17:08:10.503Z",
+          "isActive": true,
+          "userAgent": "",
+          "ipAddress": ""
+        },
+        {
+          "id": "8ce77a66-1f6f-4567-ab24-064324a9f865",
+          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI4ZGZiMjljNC0yM2ZiLTRmMzctYWUyMS04NTA3NDQyZTE0MTciLCJlbWFpbCI6InZvbHVudGVlckBleGFtcGxlLmNvbSIsInJvbGUiOiJ2b2x1bnRlZXIiLCJzZXNzaW9uSWQiOiI4Y2U3N2E2Ni0xZjZmLTQ1NjctYWIyNC0wNjQzMjRhOWY4NjUiLCJpYXQiOjE3NTUxOTEyOTEsImV4cCI6MTc1NTI3NzY5MSwiYXVkIjoidm9sdW50ZWVyLXBsYXRmb3JtLXVzZXJzIiwiaXNzIjoidm9sdW50ZWVyLXBsYXRmb3JtIn0.IazPtNPLr9_AwrTqn3Kof4Dlf6xfd0i-ILbs-rRVWLo",
+          "createdAt": "2025-08-14T17:08:11.299Z",
+          "isActive": true,
+          "userAgent": "",
+          "ipAddress": ""
+        }
+      ],
+      "createdAt": "2025-08-14T17:08:04.262Z",
+      "updatedAt": "2025-08-14T17:08:11.300Z",
+      "id": "8dfb29c4-23fb-4f37-ae21-8507442e1417"
+    },
+    {
+      "email": "coordinator@example.com",
+      "password": "$2b$12$OKjRVSZ6oJlkSpgKUeCwM.OTQaJl9XD1IYYTCOF4FXKmV41s7nVAS",
+      "firstName": "Jane",
+      "lastName": "Coordinator",
+      "role": "coordinator",
+      "isActive": true,
+      "lastLogin": "2025-08-14T17:08:09.038Z",
+      "sessions": [
+        {
+          "id": "e9ac2dfa-fcc5-4d88-8576-cecc49fe0b02",
+          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJlMmMyOTRmZC1iZDBmLTRkMTctODA4ZC1hZjFlZWU5YTU4ZGIiLCJlbWFpbCI6ImNvb3JkaW5hdG9yQGV4YW1wbGUuY29tIiwicm9sZSI6ImNvb3JkaW5hdG9yIiwic2Vzc2lvbklkIjoiZTlhYzJkZmEtZmNjNS00ZDg4LTg1NzYtY2VjYzQ5ZmUwYjAyIiwiaWF0IjoxNzU1MTkxMjg4LCJleHAiOjE3NTUyNzc2ODgsImF1ZCI6InZvbHVudGVlci1wbGF0Zm9ybS11c2VycyIsImlzcyI6InZvbHVudGVlci1wbGF0Zm9ybSJ9.-FrjirRKtjR1fUp7pSV9Zc_Jihk7ogl8QR3cbox0eA0",
+          "createdAt": "2025-08-14T17:08:08.503Z",
+          "isActive": true,
+          "userAgent": "",
+          "ipAddress": ""
+        },
+        {
+          "id": "b2c10f5b-960b-45f5-a69a-70c94ac5eeea",
+          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJlMmMyOTRmZC1iZDBmLTRkMTctODA4ZC1hZjFlZWU5YTU4ZGIiLCJlbWFpbCI6ImNvb3JkaW5hdG9yQGV4YW1wbGUuY29tIiwicm9sZSI6ImNvb3JkaW5hdG9yIiwic2Vzc2lvbklkIjoiYjJjMTBmNWItOTYwYi00NWY1LWE2OWEtNzBjOTRhYzVlZWVhIiwiaWF0IjoxNzU1MTkxMjg5LCJleHAiOjE3NTUyNzc2ODksImF1ZCI6InZvbHVudGVlci1wbGF0Zm9ybS11c2VycyIsImlzcyI6InZvbHVudGVlci1wbGF0Zm9ybSJ9.VecZuB4WU5I9h6AY8rk63AYXtrli1Z-VAtWI_5dm6RI",
+          "createdAt": "2025-08-14T17:08:09.038Z",
+          "isActive": true,
+          "userAgent": "",
+          "ipAddress": ""
+        }
+      ],
+      "createdAt": "2025-08-14T17:08:08.245Z",
+      "updatedAt": "2025-08-14T17:08:09.039Z",
+      "id": "e2c294fd-bd0f-4d17-808d-af1eee9a58db"
+    },
+    {
+      "email": "other@example.com",
+      "password": "$2b$12$TuPcvO550U0EU7P9PoDYSer5fgP2Q0ya3QuI.rEjIIAnk1XzMgU8W",
+      "firstName": "Other",
+      "lastName": "User",
+      "role": "volunteer",
+      "isActive": true,
+      "lastLogin": null,
+      "sessions": [],
+      "createdAt": "2025-08-14T17:08:10.956Z",
+      "updatedAt": "2025-08-14T17:08:10.956Z",
+      "id": "730ef695-8712-4547-9d14-f78b46095957"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "users": [
+    {
+      "email": "volunteer@example.com",
+      "password": "$2b$12$D9RbTklb.xLf6nVA38E7juZkYzvf2nlaGNeVe4BuL0Nkb0sS761O2",
+      "firstName": "John",
+      "lastName": "Volunteer",
+      "role": "volunteer",
+      "isActive": true,
+      "lastLogin": null,
+      "sessions": [],
+      "createdAt": "2025-08-14T17:53:17.703Z",
+      "updatedAt": "2025-08-14T17:53:17.703Z",
+      "id": "638191be-bd09-44fc-b08b-bb8cecf36fc3"
+    }
+  ]
+}
