@@ -16,6 +16,22 @@ function createApp() {
   const profileRoutes = require('./routes/profiles');
   const workshopRoutes = require('./routes/workshops');
 
+  // In test environment, ensure a clean users store per app instance
+  if (process.env.NODE_ENV === 'test') {
+    try {
+      const { authService } = require('./middleware/auth');
+      await (async () => {
+        const fs = require('fs-extra');
+        const path = require('path');
+        const usersDir = path.dirname(authService.storage.filePath);
+        await fs.ensureDir(usersDir);
+        await authService.storage.write({ users: [] });
+      })();
+    } catch (e) {
+      // ignore
+    }
+  }
+
   // API Routes
   app.use('/api/auth', authRoutes);
   app.use('/api/coordinator', coordinatorRoutes);

@@ -10,10 +10,15 @@
     "test:watch": "jest --watch",
     "dev": "nodemon backend/server.js",
     "start": "node backend/server.js",
-    "init:json-storage": "node backend/scripts/initStorage.js"
+    "init:json-storage": "node backend/scripts/initStorage.js",
+    "test:ui": "npm --prefix frontend test",
+    "test:ui:ui": "npm --prefix frontend run test:ui",
+    "test:ui:report": "npm --prefix frontend run test:report"
   },
   "jest": {
     "testEnvironment": "node",
+    "testPathIgnorePatterns": ["<rootDir>/frontend/"],
+    "testMatch": ["**/tests/**/*.test.js", "**/tests/**/?(*.)+(spec|test).js"],
     "collectCoverageFrom": [
       "backend/**/*.js",
       "!backend/node_modules/**"
