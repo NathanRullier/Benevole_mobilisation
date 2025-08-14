@@ -7,14 +7,14 @@ class ProfileService {
   constructor() {
     this.dataDir = path.join(__dirname, '../../data');
     this.profilesFile = path.join(this.dataDir, 'volunteer-profiles.json');
-    this.storage = new JsonStorage();
+    this.storage = new JsonStorage(this.profilesFile);
   }
 
   async initialize() {
     await fs.ensureDir(this.dataDir);
     
     if (!await fs.pathExists(this.profilesFile)) {
-      await this.storage.write(this.profilesFile, { profiles: [] });
+      await this.storage.write({ profiles: [] });
     }
   }
 
@@ -93,7 +93,7 @@ class ProfileService {
       throw new Error(`Validation failed: ${validationErrors.join(', ')}`);
     }
 
-    const data = await this.storage.read(this.profilesFile);
+    const data = await this.storage.read();
     
     // Check if profile already exists for this user
     const existingProfile = data.profiles.find(p => p.userId === userId);
@@ -113,7 +113,7 @@ class ProfileService {
     };
 
     data.profiles.push(newProfile);
-    await this.storage.write(this.profilesFile, data);
+    await this.storage.write(data);
 
     return newProfile;
   }
@@ -122,7 +122,7 @@ class ProfileService {
   async getProfileByUserId(userId) {
     await this.initialize();
     
-    const data = await this.storage.read(this.profilesFile);
+    const data = await this.storage.read();
     const profile = data.profiles.find(p => p.userId === userId && p.isActive);
     
     if (!profile) {
@@ -136,7 +136,7 @@ class ProfileService {
   async getProfileById(profileId) {
     await this.initialize();
     
-    const data = await this.storage.read(this.profilesFile);
+    const data = await this.storage.read();
     const profile = data.profiles.find(p => p.profileId === profileId && p.isActive);
     
     return profile || null;
@@ -152,7 +152,7 @@ class ProfileService {
       throw new Error(`Validation failed: ${validationErrors.join(', ')}`);
     }
 
-    const data = await this.storage.read(this.profilesFile);
+    const data = await this.storage.read();
     const profileIndex = data.profiles.findIndex(p => p.userId === userId && p.isActive);
     
     if (profileIndex === -1) {
@@ -166,7 +166,7 @@ class ProfileService {
       updatedAt: new Date().toISOString()
     };
 
-    await this.storage.write(this.profilesFile, data);
+    await this.storage.write(data);
     return data.profiles[profileIndex];
   }
 
@@ -174,7 +174,7 @@ class ProfileService {
   async deleteProfile(userId) {
     await this.initialize();
 
-    const data = await this.storage.read(this.profilesFile);
+    const data = await this.storage.read();
     const profileIndex = data.profiles.findIndex(p => p.userId === userId && p.isActive);
     
     if (profileIndex === -1) {
@@ -186,7 +186,7 @@ class ProfileService {
     data.profiles[profileIndex].deletedAt = new Date().toISOString();
     data.profiles[profileIndex].updatedAt = new Date().toISOString();
 
-    await this.storage.write(this.profilesFile, data);
+    await this.storage.write(data);
     return true;
   }
 
@@ -194,7 +194,7 @@ class ProfileService {
   async searchProfiles(filters = {}) {
     await this.initialize();
     
-    const data = await this.storage.read(this.profilesFile);
+    const data = await this.storage.read();
     let profiles = data.profiles.filter(p => p.isActive);
 
     // Apply filters
@@ -249,7 +249,7 @@ class ProfileService {
   async updateProfilePhoto(userId, photoUrl) {
     await this.initialize();
 
-    const data = await this.storage.read(this.profilesFile);
+    const data = await this.storage.read();
     const profileIndex = data.profiles.findIndex(p => p.userId === userId && p.isActive);
     
     if (profileIndex === -1) {
@@ -259,7 +259,7 @@ class ProfileService {
     data.profiles[profileIndex].profilePhoto = photoUrl;
     data.profiles[profileIndex].updatedAt = new Date().toISOString();
 
-    await this.storage.write(this.profilesFile, data);
+    await this.storage.write(data);
     return data.profiles[profileIndex];
   }
 
@@ -267,7 +267,7 @@ class ProfileService {
   async getAllProfiles() {
     await this.initialize();
     
-    const data = await this.storage.read(this.profilesFile);
+    const data = await this.storage.read();
     return data.profiles.filter(p => p.isActive);
   }
 
@@ -275,7 +275,7 @@ class ProfileService {
   async getProfileStats() {
     await this.initialize();
     
-    const data = await this.storage.read(this.profilesFile);
+    const data = await this.storage.read();
     const activeProfiles = data.profiles.filter(p => p.isActive);
 
     const stats = {

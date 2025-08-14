@@ -5,29 +5,29 @@ const workshopService = require('../services/workshopService');
 
 // Create workshop (coordinator only)
 router.post('/', authenticateToken, requireRole('coordinator'), async (req, res) => {
-  try {
-    const workshopData = {
-      ...req.body,
-      createdBy: req.user.userId,
-      createdAt: new Date().toISOString(),
-      updatedAt: new Date().toISOString()
-    };
+	try {
+		const workshopData = {
+			...req.body,
+			createdBy: req.user.id,
+			createdAt: new Date().toISOString(),
+			updatedAt: new Date().toISOString()
+		};
 
-    const result = await workshopService.createWorkshop(workshopData);
-    res.status(201).json(result);
-  } catch (error) {
-    if (error.message.includes('validation error')) {
-      res.status(400).json({ 
-        message: error.message,
-        errors: error.errors || []
-      });
-    } else {
-      res.status(500).json({ 
-        message: 'Internal server error',
-        error: error.message 
-      });
-    }
-  }
+		const result = await workshopService.createWorkshop(workshopData);
+		res.status(201).json(result);
+	} catch (error) {
+		if (error.message.includes('validation error')) {
+			res.status(400).json({ 
+				message: error.message,
+				errors: error.errors || []
+			});
+		} else {
+			res.status(500).json({ 
+				message: 'Internal server error',
+				error: error.message 
+			});
+		}
+	}
 });
 
 // Get all workshops with filtering
